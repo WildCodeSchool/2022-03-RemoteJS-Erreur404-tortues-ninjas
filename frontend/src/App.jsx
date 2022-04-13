@@ -1,12 +1,10 @@
-import Home from "@pages/Home";
-
 import "./App.css";
+import ApiRequests from "@components/TestAPIRequests";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      <ApiRequests />
     </div>
   );
 }
