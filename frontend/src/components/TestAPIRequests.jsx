@@ -87,12 +87,15 @@ const data = {
 };
 
 function ApiRequests() {
+  const url = "https://image.tmdb.org/t/p/w500";
   return (
     <div>
       <h2>bonjour je fais un test</h2>
       <div>{data.original_title}</div>
       <div>{data.overview}</div>
-      <div>{data.poster_path}</div>
+      <div>
+        <img src={url + data.poster_path} />
+      </div>
     </div>
   );
 }
