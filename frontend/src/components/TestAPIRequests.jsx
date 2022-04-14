@@ -94,7 +94,7 @@ function ApiRequests() {
       <div>{data.original_title}</div>
       <div>{data.overview}</div>
       <div>
-        <img src={url + data.poster_path} />
+        <img src={url + data.poster_path} alt="movie poster" />
       </div>
     </div>
   );
