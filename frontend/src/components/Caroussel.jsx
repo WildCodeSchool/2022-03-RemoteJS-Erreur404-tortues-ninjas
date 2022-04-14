@@ -4,11 +4,13 @@ import "@components/Caroussel.css";
 
 function Caroussel() {
   return (
-    <div className="Caroussel">
-      <TestAPIRequests />
-      <TestAPIRequests />
-      <TestAPIRequests />
-      <TestAPIRequests />
+    <div className="Global">
+      <div className="Caroussel">
+        <TestAPIRequests />
+        <TestAPIRequests />
+        <TestAPIRequests />
+        <TestAPIRequests />
+      </div>
     </div>
   );
 }
