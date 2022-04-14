@@ -15,12 +15,11 @@ function ApiRequests() {
   }, []);
 
   return (
-    <div className="movieCard">
-      <h2>bonjour je fais un test</h2>
-      <div>{movie.original_title}</div>
-      <div>{movie.overview}</div>
-      <div>
-        <img src={url + movie.poster_path} alt="movie poster" />
+    <div className="global">
+      <div className="caroussel">
+        <div className="movie-card">
+          <img src={url + movie.poster_path} alt="movie poster" />
+        </div>
       </div>
     </div>
   );
