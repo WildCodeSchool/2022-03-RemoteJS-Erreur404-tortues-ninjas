@@ -1,10 +1,10 @@
 import "./App.css";
-import ApiRequests from "./components/TestAPIRequests";
+import Caroussel from "./components/Caroussel";
 
 function App() {
   return (
     <div className="App">
-      <ApiRequests />
+      <Caroussel />
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.caroussel {
+  display: flex;
+  justify-content: space-evenly;
+}
+.movie-card {
+  background-color: red;
+}
