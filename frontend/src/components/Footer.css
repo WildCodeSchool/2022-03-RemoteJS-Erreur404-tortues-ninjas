@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Hind:wght@300;400&display=swap');
 
 .footer {
   width: 100%;
-  padding:60px;
+  padding: 60px;
 }
 
 .footer {
@@ -14,21 +16,22 @@
 
 .links {
   color: #f0edee;
+  font-family:"Hind", sans-serif;
 }
 
 p {
-    margin:5px;
+  margin: 5px;
 }
 
 .global-links {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .images {
-   width: 140px;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   align-items: center;
-   padding-left: 8%;
+  width: 140px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding-left: 8%;
 }
