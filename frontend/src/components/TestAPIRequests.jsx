@@ -11,10 +11,9 @@ function ApiRequests() {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/${randomId(
-          500,
-          550
-        )}?api_key=00509154781d3cc584842a62f7f632c2`
+        `https://api.themoviedb.org/3/movie/${randomId(500, 550)}?api_key=${
+          import.meta.env.VITE_TMDB_KEY
+        }`
       )
       .then((res) => setMovie(res.data));
   }, []);
