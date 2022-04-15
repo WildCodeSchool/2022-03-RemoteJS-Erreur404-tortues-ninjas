@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+.footer {
+  width: 100%;
+  padding:60px;
+}
+
+.footer {
+  background-color: #141414;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.links {
+  color: #f0edee;
+}
+
+p {
+    margin:5px;
+}
+
+.global-links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.images {
+   width: 140px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   align-items: center;
+   padding-left: 8%;
+}
