@@ -1,12 +1,13 @@
 import Counter from "@components/Counter";
-import logo from "@assets/logo.svg";
+// import logo from "@assets/logo.svg";
+import HomeButton from "@components/HomeButton";
+// import logo from "@assets/logo.png";
 
 export default function Home() {
   return (
     <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
       <p>Hello Vite + React !</p>
-
+      <HomeButton />
       <Counter />
 
       <p>

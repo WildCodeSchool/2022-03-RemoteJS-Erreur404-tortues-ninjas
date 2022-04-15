@@ -1,12 +1,11 @@
-import Home from "@pages/Home";
-
 import "./App.css";
+import HomeButton from "@components/HomeButton";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <p>coucou</p>
+      {/* <p>coucou</p> */}
+      <HomeButton />
     </div>
   );
 }

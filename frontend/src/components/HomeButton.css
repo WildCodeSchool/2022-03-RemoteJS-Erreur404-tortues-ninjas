@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+    padding: 0; 
+	box-sizing :border-box;
+}
+.MoodLogo{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: baseline;
+	align-content: stretch;
+	background-color: #141414;
+	}
+	
+	.HomeTwoButton{
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-end;
+	align-content: center;
+	background-color: #141414;
+	height: 100vh;
+	width: 100%;
+	}
+
+  img{
+	height: 70rem;
+	width: 70rem;	
+	}
+
+	@media screen and (max-width: 768px) {
+    img {
+    display: flex;
+	flex-direction: row;
+	height: 10rem;
+	width: 10rem;
+	
+  }
+   .HomeTwoButton{
+	display: flex;
+	flex-direction: column;
+	
+   }
+}
