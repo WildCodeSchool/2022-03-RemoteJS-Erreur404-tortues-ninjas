@@ -5,7 +5,7 @@
 
 .footer {
   width: 100%;
-  padding: 60px;
+  padding: 40px 12px 40px 12px;
 }
 
 .footer {
@@ -21,6 +21,7 @@
 
 p {
   margin: 5px;
+  text-align: center;
 }
 
 .global-links {
@@ -33,5 +34,4 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  padding-left: 8%;
 }
