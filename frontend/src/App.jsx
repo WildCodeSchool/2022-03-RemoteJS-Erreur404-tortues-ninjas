@@ -1,12 +1,13 @@
-import Home from "@pages/Home";
+import TextePrésentationPageAccueil from "./components/TextePrésentationPageAccueil";
+import ExperimentTailwind from "./components/ExperimentTailwind";
 
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
+    <div>
+      <TextePrésentationPageAccueil />
+      <ExperimentTailwind />
     </div>
   );
 }
