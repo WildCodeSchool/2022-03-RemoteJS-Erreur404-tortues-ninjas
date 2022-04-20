@@ -1,6 +1,6 @@
 import React from "react";
 /* Composant texte de présentation à mettre dans la page d'accueil */
-function TextePrésentation() {
+function TextePresentation() {
   return (
     <div>
       <div>
@@ -31,4 +31,4 @@ function TextePrésentation() {
     </div>
   );
 }
-export default TextePrésentation;
+export default TextePresentation;
