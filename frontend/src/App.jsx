@@ -1,10 +1,10 @@
-import TextePrésentation from "./components/TextePrésentation";
+import TextePresentation from "./components/TextePresentation";
 import "./App.css";
 
 function App() {
   return (
     <div>
-      <TextePrésentation />
+      <TextePresentation />
     </div>
   );
 }
