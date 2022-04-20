@@ -1,0 +1,37 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Hind:wght@300;400&display=swap');
+
+.footer {
+  width: 100%;
+  padding: 40px 12px 40px 12px;
+}
+
+.footer {
+  background-color: #141414;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.links {
+  color: #f0edee;
+  font-family:"Hind", sans-serif;
+}
+
+p {
+  margin: 5px;
+  text-align: center;
+}
+
+.global-links {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.images {
+  width: 140px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
