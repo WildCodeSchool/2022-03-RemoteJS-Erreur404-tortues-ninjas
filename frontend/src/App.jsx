@@ -1,14 +1,11 @@
-import Home from "@pages/Home";
-
+import TextePresentation from "./components/TextePresentation";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
+    <div>
+      <TextePresentation />
     </div>
   );
 }
-
 export default App;
