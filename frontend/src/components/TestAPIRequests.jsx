@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "@components/TestAPIRequests.css";
+import "./TestAPIRequests.css";
 
 function ApiRequests() {
   const url = "https://image.tmdb.org/t/p/w500";

@@ -1,6 +1,6 @@
 import React from "react";
-import TestAPIRequests from "@components/TestAPIRequests";
-import "@components/Caroussel.css";
+import TestAPIRequests from "./TestAPIRequests";
+import "./Caroussel.css";
 
 function Caroussel() {
   return (
