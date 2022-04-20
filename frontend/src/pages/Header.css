@@ -1,6 +1,10 @@
-.header-animation {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.header-animation {
+  height: 100vh;
+  width: 100%;
+}
