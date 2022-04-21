@@ -1,7 +1,6 @@
 /* Affichage logo mobile firt */
 @media screen and (max-width: 768px) {
   img {
-    /* position: fixed; */
     width: 15rem;
     height: 15rem;
     -webkit-animation: cssAnimation 3s forwards;
