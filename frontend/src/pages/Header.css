@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141414;
+}
+
+.header-animation {
+  height: 100vh;
+  width: 100%;
+  /* animation: transitionIn 0.75s; */
+  animation: slidein 3s;
+}
+
+@keyframes slidein {
+  from {
+    margin-bottom: 50%;
+    height: 100vh;
+  }
+  to {
+    margin-bottom: 0%;
+    height: 0vh;
+  }
+}
+
+/* @keyframes transitionIn {
+  from {
+  opacity: 50%;
+  transform: rotateY(50deg);
+  color: red;
+  }
+  to {
+  opacity: 100%;
+  transform: rotateY(-50); 
+  color: red;
+  }
+  }  */
+
+/* .header {
+  width: 33.33%;
+  color: red;
+} */
