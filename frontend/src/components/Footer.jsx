@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
-import logoFacebook from "@assets/facebook.svg";
-import logoInsta from "@assets/instagram.svg";
-import logoTwitter from "@assets/twitter.svg";
+import logoFacebook from "../assets/facebook.svg";
+import logoInsta from "../assets/instagram.svg";
+import logoTwitter from "../assets/twitter.svg";
 
 function Footer() {
   return (
