@@ -19,7 +19,7 @@
 }
 
 p {
-  margin: 5px;
+  margin: 2px;
   text-align: center;
 }
 
@@ -29,7 +29,7 @@ p {
   flex-direction: column;
 }
 .images {
-  width: 140px;
+  width: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
