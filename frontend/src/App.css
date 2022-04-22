@@ -1,4 +1,30 @@
-body {
+/* Import de Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import des polices de texte Hind et Expletus. */
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@1,400;1,500&family=Hind:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.titre-texte-présentation-page-accueil-tailwind {
+  font-family: "Expletus Sans", sans-serif;
+  background-color: #141414;
+  color: #f0edee;
+  @apply text-center mr-4 ml-4 text-2xl font-bold no-underline;
+}
+.paragraphe-texte-présentation-page-accueil-tailwind {
+  font-family: "Hind", sans-serif;
+  background-color: #141414;
+  color: #f0edee;
+  @apply text-center mr-4 ml-4 text-base no-underline;
+}
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -53,4 +79,4 @@ code {
 
 button {
   font-size: calc(10px + 2vmin);
-}
+} */
