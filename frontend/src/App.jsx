@@ -6,7 +6,6 @@ import ResultatPizza from "./pages/ResultatPizza";
 import RechercheFilm from "./pages/RechercheFilm";
 import ResultatFilm from "./pages/ResultatFilm";
 import Formulaire from "./pages/Formulaire";
-import Navbar from "./pages/Navbar";
 import Footer from "./components/Footer";
 import PopupSuggestion from "./pages/PopupSuggestion";
 import PopupRetourAccueil from "./pages/PopupRetourAccueil";
@@ -15,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search/film" element={<RechercheFilm />} />
