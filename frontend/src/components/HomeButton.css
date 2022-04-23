@@ -20,7 +20,7 @@
   padding-bottom: 80px;
 }
 
-.image-button:hover {
+.image-button {
   animation-name: buttonAnimation;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -52,5 +52,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+  .image-button:hover {
+    animation-name: buttonAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes buttonAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(1000deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 }   
