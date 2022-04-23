@@ -20,6 +20,24 @@
   padding-bottom: 80px;
 }
 
+.image-button:hover {
+  animation-name: buttonAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(1000deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 @media screen and (min-width : 750px) {
   .image-button {
     padding-top: 100px;
