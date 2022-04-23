@@ -14,8 +14,25 @@
   flex-direction: column;
 }
 .image-button {
-  width: 65%;
+  width: 55vw;
+  max-width: 350px;
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
+@media screen and (min-width : 750px) {
+  .image-button {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .HomeButton {
+    display: flex;
+    justify-content:center ;
+  }
+  .HomeTwoButton {
+    background-color: #141414;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}   
