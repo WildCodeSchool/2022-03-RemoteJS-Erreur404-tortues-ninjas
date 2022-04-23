@@ -3,15 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-.MoodLogo {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: baseline;
-  align-content: stretch;
-  background-color: #141414;
-}
 
 .HomeTwoButton {
   display: flex;
@@ -53,18 +44,18 @@
     transform: translateX(0%);
   }
 }
-img {
+.image-button {
   height: 80rem;
   width: 80rem;
   margin-bottom: 10rem;
 }
-button {
+.HomeButton {
   border: none;
   font-size: 0;
 }
 
 @media screen and (max-width: 768px) {
-  img {
+  .image-button {
     display: flex;
     flex-direction: row;
     height: 8rem;
@@ -74,7 +65,7 @@ button {
     display: flex;
     flex-direction: column;
   }
-  button {
+  .HomeButton {
     border: none;
   }
 }

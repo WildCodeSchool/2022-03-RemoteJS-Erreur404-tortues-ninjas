@@ -9,13 +9,13 @@ function Footer() {
     <div>
       <div className="footer">
         <div className="images">
-          <div className="img">
+          <div className="img-social-media">
             <img src={logoFacebook} alt="logo facebook" />
           </div>
-          <div className="img">
+          <div className="img-social-media">
             <img src={logoInsta} alt="logo insta" />
           </div>
-          <div className="img">
+          <div className="img-social-media">
             <img src={logoTwitter} alt="logo twitter" />
           </div>
         </div>

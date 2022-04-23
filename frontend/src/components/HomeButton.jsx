@@ -1,21 +1,26 @@
 import React from "react";
 import HomeButtonBobine from "../assets/HomeButtonBobine.png";
 import HomeButtonPizza from "../assets/HomeButtonPizza.png";
-import MoodLogo from "../assets/MoodLogo.png";
+
 import "./HomeButton.css";
 
 function HomeButton() {
   return (
     <div>
-      <div className="MoodLogo">
-        <img src={MoodLogo} alt="MoodLogo" />
-      </div>
       <div className="HomeTwoButton">
         <div className="HomeButton">
-          <img src={HomeButtonBobine} alt="HomeButtonBobine" />
+          <img
+            src={HomeButtonBobine}
+            alt="HomeButtonBobine"
+            className="image-button"
+          />
         </div>
         <div className="HomeButton">
-          <img src={HomeButtonPizza} alt="HomeButtonPizza" />
+          <img
+            src={HomeButtonPizza}
+            alt="HomeButtonPizza"
+            className="image-button"
+          />
         </div>
       </div>
     </div>
