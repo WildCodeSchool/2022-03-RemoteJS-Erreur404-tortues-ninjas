@@ -2,8 +2,7 @@
     display: flex;
     justify-content: center;
     width: auto;
-    min-height: 100px;
-    height: 50vw;
-    max-height: 190px;
+    height: 60vw;
+    max-height: 270px;
     background-color: #141414;
-  }
+}

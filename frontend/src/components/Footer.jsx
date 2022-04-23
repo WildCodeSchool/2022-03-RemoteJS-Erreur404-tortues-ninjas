@@ -21,10 +21,10 @@ function Footer() {
         </div>
         <div className="global-links">
           <div className="links">
-            <p>Mentions légales</p>
+            <p className="footer-paragraph">Mentions légales</p>
           </div>
           <div className="links">
-            <p>Politique de confidentialité</p>
+            <p className="footer-paragraph">Politique de confidentialité</p>
           </div>
         </div>
       </div>

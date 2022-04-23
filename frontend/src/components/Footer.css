@@ -18,8 +18,7 @@
   font-family: "Hind", sans-serif;
 }
 
-p {
-  margin: 2px;
+.footer-paragraph {
   text-align: center;
 }
 
@@ -29,8 +28,20 @@ p {
   flex-direction: column;
 }
 .images {
-  width: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+}
+
+.img-social-media {
+  width: 30px;
+}
+
+@media screen and (min-width : 750px) {
+  .images {
+    display:flex;
+    justify-content: flex-start;
+    padding-left: 60px;
+
+  }
 }
