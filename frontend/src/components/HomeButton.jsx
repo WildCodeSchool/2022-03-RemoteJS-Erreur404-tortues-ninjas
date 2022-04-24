@@ -6,7 +6,7 @@ import "./HomeButton.css";
 
 function HomeButton() {
   return (
-    <div>
+    <div className="max-height">
       <div className="HomeTwoButton">
         <div className="HomeButton">
           <img
