@@ -34,11 +34,10 @@
   width: 30px;
 }
 
-@media screen and (min-width : 750px) {
+@media screen and (min-width: 750px) {
   .images {
-    display:flex;
+    display: flex;
     justify-content: flex-start;
     padding-left: 60px;
-
   }
 }

@@ -1,9 +1,9 @@
 .MoodLogo {
-    display: flex;
-    justify-content: center;
-    width: auto;
-    height: 60vw;
-    max-height: 270px;
-    background-color: #141414;
-    padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 60vw;
+  max-height: 270px;
+  background-color: #141414;
+  padding-top: 20px;
 }

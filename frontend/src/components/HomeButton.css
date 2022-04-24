@@ -6,7 +6,7 @@
 
 .HomeButton {
   display: flex;
-  justify-content:center ;
+  justify-content: center;
 }
 .HomeTwoButton {
   background-color: #141414;
@@ -20,9 +20,11 @@
   padding-bottom: 80px;
 }
 
-.image-button:hover {
+/* css animation of the buttons */
+
+.image-button {
   animation-name: buttonAnimation;
-  animation-duration: 10s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
 }
 
@@ -37,15 +39,18 @@
     transform: rotate(0deg);
   }
 }
+/* fin css animation button */
 
-@media screen and (min-width : 750px) {
+/* Section css desktop  */
+
+@media screen and (min-width: 750px) {
   .image-button {
     padding-top: 100px;
     padding-bottom: 100px;
   }
   .HomeButton {
     display: flex;
-    justify-content:center ;
+    justify-content: center;
   }
   .HomeTwoButton {
     background-color: #141414;
@@ -53,17 +58,23 @@
     flex-direction: row;
     justify-content: space-around;
   }
-  .image-button:hover {
-    animation-name: buttonAnimation;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-  }
-  
+
   .max-height {
     background-color: #141414;
     height: 100vh;
   }
   
+  .image-button {
+    animation-name:buttonAnimation;
+    animation-duration: 0s;
+  }
+
+  .image-button:hover {
+    animation-name: buttonAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
   @keyframes buttonAnimation {
     0% {
       transform: rotate(0deg);
@@ -75,4 +86,4 @@
       transform: rotate(0deg);
     }
   }
-}   
+}

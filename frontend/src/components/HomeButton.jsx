@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import HomeButtonBobine from "../assets/HomeButtonBobine.png";
 import HomeButtonPizza from "../assets/HomeButtonPizza.png";
-
 import "./HomeButton.css";
 
 function HomeButton() {
@@ -9,18 +9,22 @@ function HomeButton() {
     <div className="max-height">
       <div className="HomeTwoButton">
         <div className="HomeButton">
-          <img
-            src={HomeButtonBobine}
-            alt="HomeButtonBobine"
-            className="image-button"
-          />
+          <Link to="/search/film">
+            <img
+              src={HomeButtonBobine}
+              alt="HomeButtonBobine"
+              className="image-button"
+            />
+          </Link>
         </div>
         <div className="HomeButton">
-          <img
-            src={HomeButtonPizza}
-            alt="HomeButtonPizza"
-            className="image-button"
-          />
+          <Link to="/search/pizza">
+            <img
+              src={HomeButtonPizza}
+              alt="HomeButtonPizza"
+              className="image-button"
+            />
+          </Link>
         </div>
       </div>
     </div>
