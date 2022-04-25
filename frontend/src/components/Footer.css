@@ -5,9 +5,6 @@
 .footer {
   width: 100%;
   padding: 40px 12px 40px 12px;
-}
-
-.footer {
   background-color: #141414;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -18,8 +15,7 @@
   font-family: "Hind", sans-serif;
 }
 
-p {
-  margin: 5px;
+.footer-paragraph {
   text-align: center;
 }
 
@@ -29,8 +25,19 @@ p {
   flex-direction: column;
 }
 .images {
-  width: 140px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+}
+
+.img-social-media {
+  width: 30px;
+}
+
+@media screen and (min-width: 750px) {
+  .images {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 60px;
+  }
 }

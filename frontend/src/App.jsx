@@ -1,22 +1,19 @@
 import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./pages/Header";
-// import Home from "./pages/Home";
-// import RechercheFilm from "./pages/RechercheFilm";
-// import RecherchePizza from "./pages/RecherchePizza";
-// import ResultatFilm from "./pages/ResultatFilm";
-// import ResultatPizza from "./pages/ResultatPizza";
-// import Formulaire from "./pages/Formulaire";
-// import Navbar from "./pages/Navbar";
-// import PopupSuggestion from "./pages/PopupSuggestion";
-// import PopupRetourAccueil from "./pages/PopupRetourAccueil";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import RecherchePizza from "./pages/RecherchePizza";
+import ResultatPizza from "./pages/ResultatPizza";
+import RechercheFilm from "./pages/RechercheFilm";
+import ResultatFilm from "./pages/ResultatFilm";
+import Formulaire from "./pages/Formulaire";
+import Footer from "./components/Footer";
+import PopupSuggestion from "./pages/PopupSuggestion";
+import PopupRetourAccueil from "./pages/PopupRetourAccueil";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      {/* <Router>
-        <Navbar />
+      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/search/film" element={<RechercheFilm />} />
@@ -28,7 +25,8 @@ function App() {
           <Route path="/popup/home" element={<PopupRetourAccueil />} />
           <Route path="/return" element={<PopupRetourAccueil />} />
         </Routes>
-      </Router> */}
+      </Router>
+      <Footer />
     </div>
   );
 }

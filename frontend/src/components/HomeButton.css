@@ -3,42 +3,87 @@
   padding: 0;
   box-sizing: border-box;
 }
-.MoodLogo {
+
+.HomeButton {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: baseline;
-  align-content: stretch;
-  background-color: #141414;
 }
-
 .HomeTwoButton {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-end;
-  align-content: center;
   background-color: #141414;
-  height: 100vh;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.image-button {
+  width: 55vw;
+  max-width: 350px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-img {
-  height: 70rem;
-  width: 70rem;
+/* css animation of the buttons */
+
+.image-button {
+  animation-name: buttonAnimation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
 }
 
-@media screen and (max-width: 768px) {
-  img {
+@keyframes buttonAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(1000deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* fin css animation button */
+
+/* Section css desktop  */
+
+@media screen and (min-width: 750px) {
+  .image-button {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .HomeButton {
     display: flex;
-    flex-direction: row;
-    height: 10rem;
-    width: 10rem;
+    justify-content: center;
   }
   .HomeTwoButton {
+    background-color: #141414;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .max-height {
+    background-color: #141414;
+    height: 100vh;
+  }
+
+  .image-button {
+    animation-name: buttonAnimation;
+    animation-duration: 0s;
+  }
+
+  .image-button:hover {
+    animation-name: buttonAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes buttonAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(1000deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 }
