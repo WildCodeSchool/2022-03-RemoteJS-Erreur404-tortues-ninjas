@@ -63,9 +63,9 @@
     background-color: #141414;
     height: 100vh;
   }
-  
+
   .image-button {
-    animation-name:buttonAnimation;
+    animation-name: buttonAnimation;
     animation-duration: 0s;
   }
 
