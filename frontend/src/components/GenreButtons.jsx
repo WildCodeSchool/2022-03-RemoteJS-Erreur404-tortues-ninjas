@@ -1,25 +1,17 @@
-// import React from "react";
+import React from "react";
+import genres from "../data/genres";
 
-// function GenreButton({ genres, setGenreID }) {
-//   console.warn(genres[0].id);
-//   return (
-//     <div className="button">
-//       <button type="button" onClick={setGenreID(genres[0].id)}>
-//         Romance
-//       </button>
-//       <button type="button" onClick={setGenreID(genres[1].id)}>
-//         Action
-//       </button>
-//       <button type="button" onClick={setGenreID(genres[2].id)}>
-//         Dramatique
-//       </button>
-//       <button type="button" onClick={setGenreID(genres[3].id)}>
-//         Comédie
-//       </button>
-//       <button type="button" onClick={setGenreID(genres[4].id)}>
-//         Horreur
-//       </button>
-//     </div>
-//   );
-// }
-// export default GenreButton;
+function GenreButton({ setGenreID }) {
+  return (
+    <div className="button">
+      {genres.map((genre) => {
+        return (
+          <button type="button" onClick={setGenreID(genre.id)}>
+            {genre.name}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+export default GenreButton;
