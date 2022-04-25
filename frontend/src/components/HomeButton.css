@@ -3,78 +3,87 @@
   padding: 0;
   box-sizing: border-box;
 }
-.MoodLogo {
+
+.HomeButton {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: baseline;
-  align-content: stretch;
+}
+.HomeTwoButton {
   background-color: #141414;
+  display: flex;
+  flex-direction: column;
+}
+.image-button {
+  width: 55vw;
+  max-width: 350px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-.HomeTwoButton {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
-  align-content: space-around;
-  background-color: #141414;
-  height: 50vh;
-  width: 100%;
+/* css animation of the buttons */
+
+.image-button {
+  animation-name: buttonAnimation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
 }
-.HomeTwoButton :nth-child(2) {
-  animation: wobble 2s ease infinite;
-}
-.HomeTwoButton :nth-child(1) {
-  animation: wobble 2s ease infinite;
-}
-@keyframes wobble {
+
+@keyframes buttonAnimation {
   0% {
-    transform: translateX(0%);
+    transform: rotate(0deg);
   }
-  15% {
-    transform: translateX(-25%) rotate(-5deg);
-  }
-  30% {
-    transform: translateX(20%) rotate(3deg);
-  }
-  45% {
-    transform: translateX(-15%) rotate(-3deg);
-  }
-  60% {
-    transform: translateX(10%) rotate(2deg);
-  }
-  75% {
-    transform: translateX(-5%) rotate(-1deg);
+  50% {
+    transform: rotate(1000deg);
   }
   100% {
-    transform: translateX(0%);
+    transform: rotate(0deg);
   }
 }
-img {
-  height: 80rem;
-  width: 80rem;
-  margin-bottom: 10rem;
-}
-button {
-  border: none;
-  font-size: 0;
-}
+/* fin css animation button */
 
-@media screen and (max-width: 768px) {
-  img {
+/* Section css desktop  */
+
+@media screen and (min-width: 750px) {
+  .image-button {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .HomeButton {
     display: flex;
-    flex-direction: row;
-    height: 8rem;
-    width: 8rem;
+    justify-content: center;
   }
   .HomeTwoButton {
+    background-color: #141414;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
   }
-  button {
-    border: none;
+
+  .max-height {
+    background-color: #141414;
+    height: 100vh;
+  }
+  
+  .image-button {
+    animation-name:buttonAnimation;
+    animation-duration: 0s;
+  }
+
+  .image-button:hover {
+    animation-name: buttonAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes buttonAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(1000deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 }
