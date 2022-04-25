@@ -19,7 +19,6 @@ function RechercheFilm() {
       });
   }, []);
   const posterArray = movie.map((element) => element.poster_path);
-  console.warn(posterArray);
   return (
     <div>
       <h1>Rechercher un film</h1>
