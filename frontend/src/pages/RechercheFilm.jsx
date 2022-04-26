@@ -17,7 +17,7 @@ function RechercheFilm() {
       .then((res) => {
         setMovie(res.data.results);
       });
-  }, []);
+  }, [genreId]);
   const posterArray = movie.map((element) => element.poster_path);
   return (
     <div>
