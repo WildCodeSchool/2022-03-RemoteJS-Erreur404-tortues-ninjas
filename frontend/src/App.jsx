@@ -9,12 +9,14 @@ import Formulaire from "./pages/Formulaire";
 import Footer from "./components/Footer";
 import PopupSuggestion from "./pages/PopupSuggestion";
 import PopupRetourAccueil from "./pages/PopupRetourAccueil";
+import Header from "./pages/Header";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
+          <Route path="/header" element={<Header />} />
           <Route path="/" element={<Home />} />
           <Route path="/search/film" element={<RechercheFilm />} />
           <Route path="/search/pizza" element={<RecherchePizza />} />

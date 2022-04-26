@@ -1,12 +1,10 @@
 /* Affichage logo mobile firt */
 @media screen and (max-width: 768px) {
-  img {
+  .logoheader {
     width: 15rem;
     height: 15rem;
     -webkit-animation: cssAnimation 3s forwards;
     animation: cssAnimation 3s forwards;
-    /* animation: pulse 1s infinite ease-in-out alternate;
-    animation: bounce 2s ease infinite; */
   }
   @keyframes cssAnimation {
     0% {
@@ -30,24 +28,6 @@
       opacity: 0;
     }
   }
-
-  /* @keyframes pulse {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0.9);
-    }
-  } */
-  /* @keyframes bounce {
-    70% { transform:translateY(0%); }
-    80% { transform:translateY(-10%); }
-    90% { transform:translateY(0%); }
-    95% { transform:translateY(-5%); }
-    97% { transform:translateY(0%); }
-    99% { transform:translateY(-3%); }
-    100% { transform:translateY(0); }
-} */
   .logo-header {
     display: flex;
     align-items: center;
@@ -59,7 +39,7 @@
 
 /* Affichage logo desktop */
 @media screen and (min-width: 768px) {
-  img {
+  .logoheader {
     width: 25rem;
     height: 25rem;
     -webkit-animation: cssAnimation 3s forwards;
@@ -88,15 +68,6 @@
       opacity: 0;
     }
   }
-
-  /* img:hover,
-  img:focus {
-    box-shadow: #b52030 0px 1px 1px, #b52030 0px 12px 30px, #b52030 0px 4px 6px,
-      #b52030 0px 12px 13px, #b52030 0px -3px 5px;
-    transform: translateY(-0.5em);
-    transition: 0.5s;
-    cursor: pointer;
-  } */
 
   .logoheader {
     display: flex;
