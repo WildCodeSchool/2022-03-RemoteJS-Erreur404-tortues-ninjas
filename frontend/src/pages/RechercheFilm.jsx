@@ -33,9 +33,7 @@ function RechercheFilm() {
       </h1>
       <GenreButton setGenreID={setGenreID} />
       <div>
-        {totalUrlPosters.map((poster) => (
-          <PosterFromApi key={poster} poster={poster} />
-        ))}
+        <PosterFromApi totalUrlPosters={totalUrlPosters} />
       </div>
     </div>
   );

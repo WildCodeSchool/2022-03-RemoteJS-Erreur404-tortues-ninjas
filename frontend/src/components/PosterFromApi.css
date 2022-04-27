@@ -1,9 +1,11 @@
 .wrapper {
   display: flex;
   justify-content: center;
-  width: 50%;
+  margin-top: 40px;
+  
 }
 
-.item {
-  border-radius: 5px;;
+.carousel-root {
+  width: 90%;
+  max-width: 500px;
 }
