@@ -1,4 +1,9 @@
-.poster {
-  width: 40%;
-  border-radius: 10px;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.item {
+  border-radius: 5px;;
 }

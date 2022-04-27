@@ -4,8 +4,8 @@ import "./PosterFromApi.css";
 function ApiRequests({ poster }) {
   return (
     <div className="global">
-      <div className="movie-card">
-        <img className="poster" src={poster} alt="movie poster" />
+      <div className="wrapper">
+        <img className="item" src={poster} alt="movie poster" />
       </div>
     </div>
   );

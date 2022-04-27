@@ -27,6 +27,24 @@
     border-radius: 5px 0px 0px 5px;
 }
 
+.button-genre-css:nth-child(3) {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.button-genre-css:nth-child(4) {
+    border-radius: 5px 0px 0px 5px;
+}
+
 .button-genre-css:last-child {
     border-radius: 0px 5px 5px 0px;
+}
+
+@media screen and (min-width: 750px) {
+    .button-genre-css:nth-child(3) {
+        border-radius:0%;
+    }
+    
+    .button-genre-css:nth-child(4) {
+        border-radius:0%;
+    } 
 }

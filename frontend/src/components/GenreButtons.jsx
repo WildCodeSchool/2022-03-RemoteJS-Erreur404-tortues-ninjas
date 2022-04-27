@@ -8,7 +8,7 @@ function GenreButton({ setGenreID }) {
       {genres.map((genre) => {
         return (
           <button
-            className="button-genre-css"
+            className="button-genre-css backgroud-genre-button"
             type="button"
             onClick={() => setGenreID(genre.id)}
           >
