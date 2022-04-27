@@ -3,10 +3,14 @@ import genres from "../data/genres";
 
 function GenreButton({ setGenreID }) {
   return (
-    <div className="button">
+    <div className="flex items-center justify-center">
       {genres.map((genre) => {
         return (
-          <button type="button" onClick={() => setGenreID(genre.id)}>
+          <button
+            className="style-button"
+            type="button"
+            onClick={() => setGenreID(genre.id)}
+          >
             {genre.name}
           </button>
         );
