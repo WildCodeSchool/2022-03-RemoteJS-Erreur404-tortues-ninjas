@@ -3,11 +3,11 @@ import "./PosterFromApi.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-function ApiRequests({ totalUrlPosters, width }) {
+function ApiRequests({ totalUrlPosters }) {
   return (
     <div className="global">
       <div className="wrapper">
-        <Carousel width={width}>
+        <Carousel>
           <div>
             <img className="item" src={totalUrlPosters[0]} alt="movie poster" />
           </div>
