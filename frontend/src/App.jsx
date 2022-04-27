@@ -6,7 +6,7 @@ import ResultatPizza from "./pages/ResultatPizza";
 import RechercheFilm from "./pages/RechercheFilm";
 import ResultatFilm from "./pages/ResultatFilm";
 import Formulaire from "./pages/Formulaire";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import PopupSuggestion from "./pages/PopupSuggestion";
 import PopupRetourAccueil from "./pages/PopupRetourAccueil";
 import Welcome from "./pages/Welcome";
@@ -28,7 +28,7 @@ function App() {
           <Route path="/return" element={<PopupRetourAccueil />} />
         </Routes>
       </Router>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
