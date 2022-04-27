@@ -1,9 +1,14 @@
 import React from "react";
+import TitleForm from "../components/TitleForm";
+import MoodLogo from "../assets/MoodLogo.png";
 
 function Formulaire() {
   return (
     <div>
-      <h1>Faites votre sugestion</h1>
+      <div className="MoodLogo">
+        <img src={MoodLogo} alt="MoodLogo" />
+      </div>
+      <TitleForm />
     </div>
   );
 }
