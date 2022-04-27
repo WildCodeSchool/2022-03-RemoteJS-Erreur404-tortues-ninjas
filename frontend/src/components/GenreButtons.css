@@ -1,0 +1,24 @@
+.button-genre-css {
+    background-color: #F0EDEE;
+     padding-left: 25px;
+     padding-right: 25px;
+     transition: 0.3s;
+}
+
+.button-genre-css:hover {
+    background-color: #b8b8b8;
+}
+
+.button-genre-css:focus{
+    background-color: #B52030 ;
+    color:#F0EDEE;
+    transition: 0.3s;
+}
+
+.button-genre-css:first-child {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.button-genre-css:last-child {
+    border-radius: 0px 5px 5px 0px;
+}
