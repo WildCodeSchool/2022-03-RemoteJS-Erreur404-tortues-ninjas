@@ -1,9 +1,10 @@
 import React from "react";
+import ResultatPizzaComponent from "../components/ResultatPizzaComponent";
 
 function ResultatPizza() {
   return (
     <div>
-      <h1>Résultat pizzas</h1>
+      <ResultatPizzaComponent />
     </div>
   );
 }
