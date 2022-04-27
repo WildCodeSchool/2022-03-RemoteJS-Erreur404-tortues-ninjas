@@ -4,7 +4,7 @@
     justify-content: center;
 }
 
-.button-genre-css {
+#bg-button-genre {
     background-color: #F0EDEE;
     padding-left: 25px;
     padding-right: 25px;
@@ -13,11 +13,11 @@
     transition: 0.3s;
 }
 
-.button-genre-css:hover {
+#bg-button-genre:hover {
     background-color: #b8b8b8;
 }
 
-.button-genre-css:focus{
+#bg-button-genre:focus{
     background-color: #B52030 ;
     color:#F0EDEE;
     transition: 0.3s;

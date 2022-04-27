@@ -9,6 +9,7 @@ function GenreButton({ setGenreID }) {
         return (
           <button
             className="button-genre-css"
+            id="bg-button-genre"
             type="button"
             onClick={() => setGenreID(genre.id)}
           >
