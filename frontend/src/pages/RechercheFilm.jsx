@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Caroussel from "../components/Caroussel";
+import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
 
 function RechercheFilm() {
@@ -19,11 +19,17 @@ function RechercheFilm() {
       });
   }, [genreId]);
   const posterArray = movie.map((element) => element.poster_path);
+  const imageUrl = "https://image.tmdb.org/t/p/w500";
+  const totalUrlPosters = posterArray.map((poster) => imageUrl + poster);
   return (
     <div>
       <h1>Rechercher un film</h1>
       <GenreButton setGenreID={setGenreID} />
-      <Caroussel posterArray={posterArray} />
+      <div>
+        {totalUrlPosters.map((poster) => (
+          <PosterFromApi key={poster} poster={poster} />
+        ))}
+      </div>
     </div>
   );
 }
