@@ -7,6 +7,7 @@ import "./Home.css";
 function Home() {
   return (
     <div>
+      <MoodLogo />
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
