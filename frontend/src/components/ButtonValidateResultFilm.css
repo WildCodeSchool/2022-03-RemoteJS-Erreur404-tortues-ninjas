@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.button-valider-resultat-film {
+  background-color: #b52030;
+  font-family: "Expletus Sans", sans-serif;
+  font-size: 1rem;
+  color: #f0edee;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 4px rgba(181, 32, 48, 0.75);
+}
+
+.button-valider-resultat-film:hover {
+  background-color: rgb(201, 13, 13);
+}
+@media screen and (min-width: 750px) {
+  /* Media queries pour version desktop. */
+  .button-valider-resultat-film {
+    width: 200px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
