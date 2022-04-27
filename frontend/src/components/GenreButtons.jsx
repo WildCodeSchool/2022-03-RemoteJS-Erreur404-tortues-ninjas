@@ -4,7 +4,7 @@ import "./GenreButtons.css";
 
 function GenreButton({ setGenreID }) {
   return (
-    <div className="flex items-center justify-center buttons-genres-css">
+    <div className="buttons-genres-css">
       {genres.map((genre) => {
         return (
           <button

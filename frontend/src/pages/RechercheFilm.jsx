@@ -28,7 +28,9 @@ function RechercheFilm() {
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
-      <h1>Rechercher un film</h1>
+      <h1 className="title-recherche-film">
+        Quel film souhaites-tu regarder ?
+      </h1>
       <GenreButton setGenreID={setGenreID} />
       <div>
         {totalUrlPosters.map((poster) => (

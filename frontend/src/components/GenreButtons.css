@@ -1,7 +1,15 @@
+.buttons-genres-css {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .button-genre-css {
     background-color: #F0EDEE;
     padding-left: 25px;
     padding-right: 25px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
     transition: 0.3s;
 }
 
