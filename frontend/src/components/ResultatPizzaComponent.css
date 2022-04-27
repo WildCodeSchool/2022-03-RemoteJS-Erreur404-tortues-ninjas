@@ -15,6 +15,8 @@
   }
   
   .resultat-pizza-component img {
+    object-fit: cover;
+    height: 22rem;
     width: 15rem;
     border-radius: 5px 5px 5px 5px;
   }
@@ -35,12 +37,13 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      margin-left: 10rem;
+      margin-left: 20rem;
       height: 100vh;
     }
   
     .resultat-pizza-component img {
-      height: 25rem; 
+      object-fit: cover;
+      height: 30rem; 
       width: 20rem;
       border-radius: 5px 5px 0 0;
     }
