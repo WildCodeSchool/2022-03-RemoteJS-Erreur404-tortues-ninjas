@@ -1,60 +1,59 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.resultat-pizza-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.resultat-pizza-component img {
+  object-fit: cover;
+  height: 22rem;
+  width: 15rem;
+  border-radius: 5px 5px 5px 5px;
+}
+.resultat-pizza-component button {
+  background-color: #b52030;
+  color: #f0edee;
+  width: 12rem;
+  height: 2.5rem;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
   .resultat-pizza-component {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start;
+    margin-left: 20rem;
     height: 100vh;
-    margin-left: 0px;
-    margin-right: 0px;
   }
-  
+
   .resultat-pizza-component img {
     object-fit: cover;
-    height: 22rem;
-    width: 15rem;
-    border-radius: 5px 5px 5px 5px;
+    height: 30rem;
+    width: 20rem;
+    border-radius: 5px 5px 0 0;
   }
+
   .resultat-pizza-component button {
     background-color: #b52030;
     color: #f0edee;
-    width: 12rem;
+    width: 20rem;
     height: 2.5rem;
-    border-radius: 5px 5px 5px 5px;
-    font-size: 0.8rem;
+    border-radius: 0px 0px 5px 5px;
     font-weight: bold;
-    border: none;
-    text-transform: uppercase;
   }
-  @media screen and (min-width: 768px) {
-    .resultat-pizza-component {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      margin-left: 20rem;
-      height: 100vh;
-    }
-  
-    .resultat-pizza-component img {
-      object-fit: cover;
-      height: 30rem; 
-      width: 20rem;
-      border-radius: 5px 5px 0 0;
-    }
-  
-    .resultat-pizza-component button {
-      background-color: #b52030;
-      color: #f0edee;
-      width: 20rem;
-      height: 2.5rem;
-      border-radius: 0px 0px 5px 5px;
-      font-weight: bold;
-    }
-  }
-  
+}
