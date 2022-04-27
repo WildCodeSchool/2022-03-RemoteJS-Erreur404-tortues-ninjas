@@ -21,9 +21,7 @@
   },
   "dependencies": {
     "dom": "^0.0.3",
-    "nodemon": "^2.0.15",
     "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0",
-    "reshake": "^1.2.3"
+    "react-router-dom": "^6.3.0"
   }
 }
