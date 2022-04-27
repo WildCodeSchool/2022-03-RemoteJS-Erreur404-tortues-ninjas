@@ -27,7 +27,9 @@
   font-size: 0.8rem;
   font-weight: bold;
   border: none;
+  cursor: pointer;
 }
+
 @media screen and (min-width: 768px) {
   .resultat-film-component {
     display: flex;
@@ -49,6 +51,15 @@
     width: 20rem;
     height: 2.5rem;
     border-radius: 0px 0px 5px 5px;
+    font-weight: bold;
+  }
+
+  .resultat-film-component button:hover {
+    background-color: #f0edee;
+    color: #b52030;
+    transition: 0.5s;
+    transform: scale(1.04, 1.04);
+    border-radius: 5px 5px 5px 5px;
     font-weight: bold;
   }
 }
