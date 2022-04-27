@@ -1,9 +1,10 @@
 import React from "react";
+import TitleBRPizza from "../components/TitleBRPizza";
 
 function RecherchePizza() {
   return (
     <div>
-      <h1>Rechercher une pizza</h1>
+      <TitleBRPizza />
     </div>
   );
 }
