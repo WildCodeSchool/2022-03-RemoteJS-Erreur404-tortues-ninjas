@@ -1,11 +1,11 @@
 import React from "react";
+import TitleBRFilm from "../components/TitleBRFilm";
 
 function RechercheFilm() {
   return (
     <div>
-      <h1>Rechercher un film</h1>
+      <TitleBRFilm />
     </div>
   );
 }
-
 export default RechercheFilm;

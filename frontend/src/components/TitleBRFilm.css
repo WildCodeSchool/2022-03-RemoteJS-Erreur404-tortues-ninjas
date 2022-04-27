@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.titre-br-film {
+  font-family: "Expletus Sans", sans-serif;
+  background-color: #141414;
+  color: #f0edee;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
