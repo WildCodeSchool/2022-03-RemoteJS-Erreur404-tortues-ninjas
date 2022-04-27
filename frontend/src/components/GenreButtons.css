@@ -1,8 +1,8 @@
 .button-genre-css {
     background-color: #F0EDEE;
-     padding-left: 25px;
-     padding-right: 25px;
-     transition: 0.3s;
+    padding-left: 25px;
+    padding-right: 25px;
+    transition: 0.3s;
 }
 
 .button-genre-css:hover {
