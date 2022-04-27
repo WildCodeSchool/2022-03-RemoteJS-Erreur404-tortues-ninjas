@@ -1,3 +1,6 @@
+
+import React from "react";
+import ButtonBackHome from "../components/ButtonBackHome";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import PosterFromApi from "../components/PosterFromApi";
@@ -24,6 +27,8 @@ function RechercheFilm() {
   return (
     <div>
       <h1>Rechercher un film</h1>
+
+      <ButtonBackHome />
       <GenreButton setGenreID={setGenreID} />
       <div>
         {totalUrlPosters.map((poster) => (
