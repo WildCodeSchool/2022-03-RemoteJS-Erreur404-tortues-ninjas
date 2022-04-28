@@ -9,9 +9,12 @@ function ApiRequests({ totalUrlPosters }) {
       <div className="wrapper">
         <Carousel>
           {totalUrlPosters.map((poster) => (
-            <div key={poster}>
-              <img className="item" src={poster} alt="movie poster" />
-            </div>
+            <img
+              key={poster}
+              className="item"
+              src={poster}
+              alt="movie poster"
+            />
           ))}
         </Carousel>
       </div>
