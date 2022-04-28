@@ -31,16 +31,11 @@ function RechercheFilm() {
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
-      <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
-
-      <h1>Rechercher un film</h1>
-
-      <ButtonBackHome />
-      <GenreButton setGenreID={setGenreID} />
+        <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
+          <ButtonBackHome />
+        <GenreButton setGenreID={setGenreID} />
       <div>
-        {totalUrlPosters.map((poster) => (
-          <PosterFromApi key={poster} poster={poster} />
-        ))}
+        <PosterFromApi totalUrlPosters={totalUrlPosters} />
       </div>
 
     </div>
