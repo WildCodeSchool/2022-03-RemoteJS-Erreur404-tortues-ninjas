@@ -1,10 +1,13 @@
 import React from "react";
 import ResultatPizzaComponent from "../components/ResultatPizzaComponent";
+import "./ResultatPizza.css";
 
 function ResultatPizza() {
   return (
-    <div>
-      <ResultatPizzaComponent />
+    <div className="resultat-pizza">
+      <div>
+        <ResultatPizzaComponent />
+      </div>
     </div>
   );
 }

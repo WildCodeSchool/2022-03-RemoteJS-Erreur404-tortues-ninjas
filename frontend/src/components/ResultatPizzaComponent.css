@@ -34,11 +34,6 @@
 @media screen and (min-width: 768px) {
   .resultat-pizza-component {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-left: 20rem;
-    height: 100vh;
   }
 
   .resultat-pizza-component img {
