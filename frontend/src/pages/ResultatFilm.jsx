@@ -3,7 +3,7 @@ import ResultatFilmComponent from "../components/ResultatFilmComponent";
 
 function ResultatFilm() {
   return (
-    <div>
+    <div className="resultat-film">
       <ResultatFilmComponent />
     </div>
   );
