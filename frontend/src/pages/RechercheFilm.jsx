@@ -1,9 +1,14 @@
 import React from "react";
+import Title from "../components/Title";
+import MoodLogo from "../assets/MoodLogo.png";
 
 function RechercheFilm() {
   return (
     <div>
-      <h1>Rechercher un film</h1>
+      <div className="MoodLogo">
+        <img src={MoodLogo} alt="MoodLogo" />
+      </div>
+      <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
     </div>
   );
 }

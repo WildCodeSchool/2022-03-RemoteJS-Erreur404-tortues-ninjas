@@ -1,5 +1,5 @@
 import React from "react";
-import TitleForm from "../components/TitleForm";
+import Title from "../components/Title";
 import MoodLogo from "../assets/MoodLogo.png";
 
 function Formulaire() {
@@ -8,7 +8,10 @@ function Formulaire() {
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
-      <TitleForm />
+      <Title
+        cls="titre"
+        text="Tu veux ajouter une nouvelle pizza à notre site ? Dis-nous tout !"
+      />
     </div>
   );
 }

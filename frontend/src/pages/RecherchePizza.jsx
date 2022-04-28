@@ -1,9 +1,14 @@
 import React from "react";
+import Title from "../components/Title";
+import MoodLogo from "../assets/MoodLogo.png";
 
 function RecherchePizza() {
   return (
     <div>
-      <h1>Rechercher une pizza</h1>
+      <div className="MoodLogo">
+        <img src={MoodLogo} alt="MoodLogo" />
+      </div>
+      <Title cls="titre" text="Quelle pizza souhaites-tu manger ? " />
     </div>
   );
 }
