@@ -17,7 +17,6 @@
     "template-fullstack": "file:..",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24"
-
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",

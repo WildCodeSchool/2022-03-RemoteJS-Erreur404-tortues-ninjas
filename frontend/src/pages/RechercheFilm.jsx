@@ -1,8 +1,6 @@
-
-import React from "react";
-import ButtonBackHome from "../components/ButtonBackHome";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ButtonBackHome from "../components/ButtonBackHome";
 import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
 
