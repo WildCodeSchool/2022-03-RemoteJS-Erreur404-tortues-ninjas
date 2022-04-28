@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Title from "../components/Title";
 import MoodLogo from "../assets/MoodLogo.png";
 import ButtonBackHome from "../components/ButtonBackHome";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
 
