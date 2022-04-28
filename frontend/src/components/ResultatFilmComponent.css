@@ -4,16 +4,12 @@
   box-sizing: border-box;
 }
 
-
-
 .resultat-film-component {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-left: 0px;
-  margin-right: 0px;
 }
 
 .resultat-film-component img {
@@ -29,14 +25,10 @@
   font-size: 0.8rem;
   font-weight: bold;
   border: none;
-  cursor: pointer;
+  
 }
 
 @media screen and (min-width: 768px) {
-  .resultat-film {
-    display: flex;
-    justify-content: space-evenly;
-  }
   .resultat-film-component {
     display: flex;
     height: 100vh;
@@ -54,6 +46,7 @@
     height: 2.5rem;
     border-radius: 0px 0px 5px 5px;
     font-weight: bold;
+    cursor: pointer;
   }
 
   .resultat-film-component button:hover {
