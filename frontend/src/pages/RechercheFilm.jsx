@@ -1,4 +1,3 @@
-
 import React from "react";
 import Title from "../components/Title";
 import MoodLogo from "../assets/MoodLogo.png";
@@ -31,13 +30,12 @@ function RechercheFilm() {
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
-        <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
-          <ButtonBackHome />
-        <GenreButton setGenreID={setGenreID} />
+      <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
+      <ButtonBackHome />
+      <GenreButton setGenreID={setGenreID} />
       <div>
         <PosterFromApi totalUrlPosters={totalUrlPosters} />
       </div>
-
     </div>
   );
 }
