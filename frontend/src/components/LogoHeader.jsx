@@ -1,13 +1,13 @@
 // Create a new component logo-header.jsx
 import React from "react";
-import LogoMood from "../assets/LogoMood.png";
+import MoodLogo from "../assets/moodlogo.png";
 import "./LogoHeader.css";
 
 function Logoheader() {
   return (
     <div className="logo-header">
       <div className="logoheader">
-        <img src={LogoMood} alt="logo-header-mood" />
+        <img src={MoodLogo} alt="logo-header-mood" />
       </div>
     </div>
   );

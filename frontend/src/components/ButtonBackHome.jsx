@@ -7,8 +7,8 @@ import "./ButtonBackHome.css";
 function ButtonBackHome() {
   return (
     <div className="max-height">
-      <Link to="/">
-        <button type="button" className="button-back-home">
+      <Link to="/home">
+        <button type="button" id="button-back-home">
           {" "}
           Revenir à l accueil{" "}
         </button>
