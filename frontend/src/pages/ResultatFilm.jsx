@@ -1,6 +1,7 @@
 import React from "react";
 
 import ButtonBackHome from "../components/ButtonBackHome";
+import ButtonValidateResult from "../components/ButtonValidateResult";
 import ResultatFilmComponent from "../components/ResultatFilmComponent";
 
 function ResultatFilm() {
@@ -10,6 +11,7 @@ function ResultatFilm() {
       <div>
         <ResultatFilmComponent />
       </div>
+      <ButtonValidateResult buttoncolor="bouton-valider-resultat-film" />
       <ButtonBackHome />
     </div>
   );
