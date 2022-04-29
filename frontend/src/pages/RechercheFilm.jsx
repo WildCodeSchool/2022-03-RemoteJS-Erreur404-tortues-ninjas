@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Title from "../components/Title";
 import MoodLogo from "../assets/MoodLogo.png";
-import ButtonBackHome from "../components/ButtonBackHome";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import ButtonBackHome from "../components/ButtonBackHome";
 import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
@@ -31,13 +29,12 @@ function RechercheFilm() {
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
-        <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
-          <ButtonBackHome />
-        <GenreButton setGenreID={setGenreID} />
+      <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
+      <ButtonBackHome />
+      <GenreButton setGenreID={setGenreID} />
       <div>
         <PosterFromApi totalUrlPosters={totalUrlPosters} />
       </div>
-
     </div>
   );
 }

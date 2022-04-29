@@ -1,4 +1,3 @@
-
 /* Import de Tailwind */
 @tailwind base;
 @tailwind components;
@@ -15,3 +14,5 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
