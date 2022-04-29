@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Title from "../components/Title";
+import MoodLogo from "../assets/MoodLogo.png";
+import ButtonBackHome from "../components/ButtonBackHome";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import ButtonBackHome from "../components/ButtonBackHome";
 import PosterFromApi from "../components/PosterFromApi";
@@ -24,15 +28,16 @@ function RechercheFilm() {
   const totalUrlPosters = posterArray.map((poster) => imageUrl + poster);
   return (
     <div>
-      <h1>Rechercher un film</h1>
-
-      <ButtonBackHome />
-      <GenreButton setGenreID={setGenreID} />
-      <div>
-        {totalUrlPosters.map((poster) => (
-          <PosterFromApi key={poster} poster={poster} />
-        ))}
+      <div className="MoodLogo">
+        <img src={MoodLogo} alt="MoodLogo" />
       </div>
+        <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
+          <ButtonBackHome />
+        <GenreButton setGenreID={setGenreID} />
+      <div>
+        <PosterFromApi totalUrlPosters={totalUrlPosters} />
+      </div>
+
     </div>
   );
 }
