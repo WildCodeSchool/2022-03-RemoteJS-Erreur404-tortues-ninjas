@@ -1,13 +1,16 @@
 import React from "react";
+
+import ButtonBackHome from "../components/ButtonBackHome";
 import ResultatFilmComponent from "../components/ResultatFilmComponent";
-import "./ResultatFilm.css";
 
 function ResultatFilm() {
   return (
-    <div className="resultat-film">
+    <div>
+      <h1>Résultat films</h1>
       <div>
         <ResultatFilmComponent />
       </div>
+      <ButtonBackHome />
     </div>
   );
 }

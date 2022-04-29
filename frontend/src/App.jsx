@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import PopupSuggestion from "./pages/PopupSuggestion";
 import PopupRetourAccueil from "./pages/PopupRetourAccueil";
 import Welcome from "./pages/Welcome";
+import "./App.css";
 
 function App() {
   return (
