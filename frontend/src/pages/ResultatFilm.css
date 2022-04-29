@@ -1,7 +1,6 @@
 @media screen and (min-width: 768px) {
-    .resultat-film {
-      display: flex;
-      justify-content: space-evenly;
-      
-    }
+  .resultat-film {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
