@@ -5,7 +5,11 @@ function ApiRequests({ poster }) {
   return (
     <div className="global">
       <div className="movie-card">
-        <img className="poster" src={poster} alt="movie poster" />
+        <img
+          className="poster"
+          src={`https://image.tmdb.org/t/p/w500/${poster.poster_path}`}
+          alt="movie poster"
+        />
       </div>
     </div>
   );
