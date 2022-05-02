@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-.button-back-home {
+#button-back-home {
+  margin:0;
   background-color: #b52030;
   font-family: "Expletus Sans", sans-serif;
   font-size: 0.5rem;
@@ -16,9 +17,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
   animation-name: gelatine;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
