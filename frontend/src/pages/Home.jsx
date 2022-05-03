@@ -1,5 +1,5 @@
 import React from "react";
-import MoodLogo from "../assets/MoodLogo.png";
+import MoodLogo from "../assets/moodlogo.png";
 import HomeButton from "../components/HomeButton";
 import "./Home.css";
 import TextHome from "../components/TextHome";

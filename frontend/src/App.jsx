@@ -10,14 +10,15 @@ import Footer from "./components/Footer";
 import PopupSuggestion from "./pages/PopupSuggestion";
 import PopupRetourAccueil from "./pages/PopupRetourAccueil";
 import Welcome from "./pages/Welcome";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/welcome" element={<Welcome />} />
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Welcome />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/search/film" element={<RechercheFilm />} />
           <Route path="/search/pizza" element={<RecherchePizza />} />
           <Route path="/resultat/film" element={<ResultatFilm />} />

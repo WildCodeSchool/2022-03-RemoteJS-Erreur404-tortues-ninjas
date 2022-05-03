@@ -1,5 +1,8 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Title from "../components/Title";
+import MoodLogo from "../assets/moodlogo.png";
+import ButtonBackHome from "../components/ButtonBackHome";
 import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
 import Filter from "../components/Form/Filter";
@@ -22,8 +25,13 @@ function RechercheFilm() {
   }, [genreId]);
   return (
     <div>
+
       <h1>Rechercher un film</h1>
-      <Filter search={search} handleSetSearch={setSearch} />
+      <div className="MoodLogo">
+        <img src={MoodLogo} alt="MoodLogo" />
+      </div>
+      <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
+        <Filter search={search} handleSetSearch={setSearch} />
       <GenreButton setGenreID={setGenreID} />
       <div>
         {movie
@@ -33,7 +41,12 @@ function RechercheFilm() {
           .map((poster) => (
             <PosterFromApi key={poster} poster={poster} />
           ))}
+       </div>
+      <GenreButton setGenreID={setGenreID} />
+      <div>
+        <PosterFromApi totalUrlPosters={totalUrlPosters} />
       </div>
+      <ButtonBackHome />
     </div>
   );
 }
