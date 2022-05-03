@@ -5,10 +5,12 @@ import MoodLogo from "../assets/moodlogo.png";
 import ButtonBackHome from "../components/ButtonBackHome";
 import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
+import Filter from "../components/Form/Filter";
 
 function RechercheFilm() {
   const [movie, setMovie] = useState([]);
   const [genreId, setGenreID] = useState(28);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     axios
@@ -21,15 +23,25 @@ function RechercheFilm() {
         setMovie(res.data.results);
       });
   }, [genreId]);
-  const posterArray = movie.map((element) => element.poster_path);
-  const imageUrl = "https://image.tmdb.org/t/p/w500";
-  const totalUrlPosters = posterArray.map((poster) => imageUrl + poster);
   return (
     <div>
+
+      <h1>Rechercher un film</h1>
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
       <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
+        <Filter search={search} handleSetSearch={setSearch} />
+      <GenreButton setGenreID={setGenreID} />
+      <div>
+        {movie
+          .filter((poster) =>
+            poster.title.toUpperCase().includes(search.toUpperCase())
+          )
+          .map((poster) => (
+            <PosterFromApi key={poster} poster={poster} />
+          ))}
+       </div>
       <GenreButton setGenreID={setGenreID} />
       <div>
         <PosterFromApi totalUrlPosters={totalUrlPosters} />
