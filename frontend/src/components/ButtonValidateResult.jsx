@@ -5,7 +5,7 @@ import "./ButtonValidateResult.css";
 function ButtonValidateResult({ buttoncolor }) {
   return (
     <div className="max-height">
-      <Link to="/popup/suggestion">
+      <Link to="/popup/home">
         <button type="button" className={buttoncolor}>
           Je valide !
         </button>
