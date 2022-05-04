@@ -5,7 +5,6 @@ import ResultatFilmComponent from "../components/ResultatFilmComponent";
 
 import MoodLogo from "../assets/MoodLogo.png";
 
-
 function ResultatFilm() {
   return (
     <div>
