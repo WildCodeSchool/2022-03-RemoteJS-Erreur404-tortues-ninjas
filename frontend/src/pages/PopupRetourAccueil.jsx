@@ -1,9 +1,10 @@
 import React from "react";
+import PopupHomeReturn from "../components/PopupHomeReturn";
 
 function PopupRetourAccueil() {
   return (
     <div>
-      <h1>Retour à la page d accueil ?</h1>
+      <PopupHomeReturn />
     </div>
   );
 }
