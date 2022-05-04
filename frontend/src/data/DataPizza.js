@@ -1,7 +1,7 @@
 const DataPizza = [
   {
     name: "Nordique",
-    category: "Exotique",
+    category: 0,
     id: 1,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/nord.36477c6ab92657b8bc026c32220a4e23.1.jpg",
@@ -9,7 +9,7 @@ const DataPizza = [
   },
   {
     name: "Pepperoni",
-    category: "Carnivore",
+    category: 1,
     id: 2,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/pepperoni.313df36c8b232421470453bbb60201dd.1.jpg",
@@ -18,7 +18,7 @@ const DataPizza = [
   },
   {
     name: "Chèvre Miel",
-    category: "Fromage",
+    category: 2,
     id: 3,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/chevre-miel.8104a0acdb16d18dac2b8ad574aa92f2.1.jpg",
@@ -26,7 +26,7 @@ const DataPizza = [
   },
   {
     name: "Chicken Barbecue",
-    category: "Poulet",
+    category: 4,
     id: 4,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/chicken-bbq.3a33b97a501154997e8a3167eca3e8ed.1.jpg",
@@ -35,7 +35,7 @@ const DataPizza = [
   },
   {
     name: "Texane Barbecue",
-    category: "Carnivore",
+    category: 1,
     id: 5,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/texane-bbq.fc5bbf2798477052fb3a288a09b0aba9.1.jpg",
@@ -44,7 +44,7 @@ const DataPizza = [
   },
   {
     name: "Spicy Hot One",
-    category: "Exotique",
+    category: 0,
     id: 6,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/spicy-hot-one.5752e3b2035e831e7f98e0fe97fdbe09.1.jpg",
@@ -53,7 +53,7 @@ const DataPizza = [
   },
   {
     name: "Provençale",
-    category: "Végétarienne",
+    category: 3,
     id: 7,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/provencale.b2790760a7c41d37418000cdebaab0d9.1.jpg",
@@ -61,7 +61,7 @@ const DataPizza = [
   },
   {
     name: "Hawaïenne jambon",
-    category: "Exotique",
+    category: 0,
     id: 8,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/hawaienne.6cf6b87d02e3b45e3702023191b5158e.1.jpg",
@@ -69,7 +69,7 @@ const DataPizza = [
   },
   {
     name: "Kasbah Kebab",
-    category: "Carnivore",
+    category: 1,
     id: 9,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/kasbah.c3aa509816d983a89fed7e99ea9f58af.1.jpg",
@@ -78,7 +78,7 @@ const DataPizza = [
   },
   {
     name: "Montagnarde",
-    category: "Fromage",
+    category: 2,
     id: 10,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/montagnarde.08fb304ab7943248500a62f78d039db7.1.jpg",
@@ -86,7 +86,7 @@ const DataPizza = [
   },
   {
     name: "Orientale",
-    category: "Exotique",
+    category: 0,
     id: 11,
     image:
       "https://api.pizzahut.io/v1/content/fr-fr/fr-1/images/pizza/orientale.aa0e75b013460d6599bc7cb9c53d5a16.1.jpg",
@@ -95,7 +95,7 @@ const DataPizza = [
   },
   {
     name: "Pomodoro e burrata",
-    category: "Fromage",
+    category: 2,
     id: 12,
     image:
       "https://medias.delarte.fr/media/sys_master/images/h50/heb/8855997087774.png",
@@ -104,7 +104,7 @@ const DataPizza = [
   },
   {
     name: "Carbonara",
-    category: "Fromage",
+    category: 2,
     id: 13,
     image:
       "https://medias.delarte.fr/media/sys_master/images/he3/hd9/8855991975966.png",
@@ -113,7 +113,7 @@ const DataPizza = [
   },
   {
     name: "3 Salumi",
-    category: "Carnivore",
+    category: 1,
     id: 14,
     image:
       "https://medias.delarte.fr/media/sys_master/images/h70/h97/8855991189534.png",
@@ -122,7 +122,7 @@ const DataPizza = [
   },
   {
     name: "Vezuvio",
-    category: "Poulet",
+    category: 4,
     id: 15,
     image:
       "https://medias.delarte.fr/media/sys_master/images/hfd/hac/8855967531038.png",
@@ -131,7 +131,7 @@ const DataPizza = [
   },
   {
     name: "5 Formaggi",
-    category: "Fromage",
+    category: 2,
     id: 16,
     image:
       "https://medias.delarte.fr/media/sys_master/images/h7f/h46/8855998267422.png",
@@ -140,7 +140,7 @@ const DataPizza = [
   },
   {
     name: "Speciale di Pizzaiolo",
-    category: "Carnivore",
+    category: 1,
     id: 17,
     image:
       "https://medias.delarte.fr/media/sys_master/images/h44/hed/8855968710686.png",
@@ -149,7 +149,7 @@ const DataPizza = [
   },
   {
     name: "Salmone",
-    category: "Exotique",
+    category: 0,
     id: 18,
     image:
       "https://medias.delarte.fr/media/sys_master/images/h53/hf9/8855983718430.png",
@@ -158,7 +158,7 @@ const DataPizza = [
   },
   {
     name: "Regina",
-    category: "Poulet",
+    category: 4,
     id: 19,
     image:
       "https://medias.delarte.fr/media/sys_master/images/h8e/h43/8855977033758.png",
@@ -166,7 +166,7 @@ const DataPizza = [
   },
   {
     name: "Bianca",
-    category: "Fromage",
+    category: 2,
     id: 20,
     image:
       "https://medias.delarte.fr/media/sys_master/images/heb/hc3/8863126618142.png",
@@ -174,7 +174,7 @@ const DataPizza = [
   },
   {
     name: "Diavola",
-    category: "Poulet",
+    category: 4,
     id: 21,
     image:
       "https://medias.delarte.fr/media/sys_master/images/hc6/hfc/8864554975262.png",
@@ -183,7 +183,7 @@ const DataPizza = [
   },
   {
     name: "Del Mare",
-    category: "Exotique",
+    category: 0,
     id: 22,
     image:
       "https://medias.delarte.fr/media/sys_master/images/hc4/h41/8863150997534.png",
@@ -192,7 +192,7 @@ const DataPizza = [
   },
   {
     name: "Margarita",
-    category: "Fromage",
+    category: 2,
     id: 23,
     image:
       "https://medias.delarte.fr/media/sys_master/images/h93/ha5/8863144312862.png",
@@ -200,7 +200,7 @@ const DataPizza = [
   },
   {
     name: "Carciofi",
-    category: "Végétarien",
+    category: 3,
     id: 24,
     image:
       "https://medias.delarte.fr/media/sys_master/images/hfa/he5/8863139987486.png",
@@ -208,3 +208,5 @@ const DataPizza = [
       'Vous serez tellement plongé dans ce film que vous allez provoquer un "pizzaccident" : manger une pizza entière par accident ! ',
   },
 ];
+
+export default DataPizza;
