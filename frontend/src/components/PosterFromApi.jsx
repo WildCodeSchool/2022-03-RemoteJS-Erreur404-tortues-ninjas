@@ -3,32 +3,28 @@ import "./PosterFromApi.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-function ApiRequests({ totalUrlPosters, posterPizzaArr, choice }) {
+function PosterFromApi({ totalUrlPosters, posterPizzaArr, choice }) {
+  const posterData = {
+    film: totalUrlPosters,
+    pizza: posterPizzaArr,
+  };
+
   return (
     <div className="global">
       <div className="wrapper">
         <Carousel>
-          {choice === "film"
-            ? totalUrlPosters.map((poster) => (
-                <img
-                  key={poster}
-                  className="item"
-                  src={poster}
-                  alt="movie poster"
-                />
-              ))
-            : posterPizzaArr.map((poster) => (
-                <img
-                  key={poster}
-                  className="item"
-                  src={poster}
-                  alt="movie poster"
-                />
-              ))}
+          {posterData[choice].map((poster) => (
+            <img
+              key={poster}
+              className="item"
+              src={poster}
+              alt="movie poster"
+            />
+          ))}
         </Carousel>
       </div>
     </div>
   );
 }
 
-export default ApiRequests;
+export default PosterFromApi;
