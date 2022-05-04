@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import PopupSuggestion from "./pages/PopupSuggestion";
 import PopupRetourAccueil from "./pages/PopupRetourAccueil";
 import Welcome from "./pages/Welcome";
+import Page404 from "./pages/Page404";
 import "./App.css";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/popup/suggestion" element={<PopupSuggestion />} />
           <Route path="/popup/home" element={<PopupRetourAccueil />} />
           <Route path="/return" element={<PopupRetourAccueil />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
       </Router>
       <Footer />
