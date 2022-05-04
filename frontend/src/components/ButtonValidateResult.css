@@ -16,8 +16,8 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 10px 4px rgba(144, 240, 169, 0.75);
-  padding: 1rem;
-  margin: 1rem;
+  padding: auto;
+  margin: auto;
 }
 
 .bouton-valider-resultat-pizza:hover {
@@ -37,8 +37,8 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 10px 4px rgba(181, 32, 48, 0.75);
-  padding: 1rem;
-  margin: 1rem;
+  padding: auto;
+  margin: auto;
 }
 
 .bouton-valider-resultat-film:hover {
