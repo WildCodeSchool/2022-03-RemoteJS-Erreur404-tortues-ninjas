@@ -70,13 +70,11 @@ function RechercheFilm() {
           />
         ))}
       </div>
-      <div>
-        <PosterFromApi
-          totalUrlPosters={totalUrlPosters}
-          posterPizzaArr={posterPizzaArr}
-          choice={choice}
-        />
-      </div>
+      <PosterFromApi
+        totalUrlPosters={totalUrlPosters}
+        posterPizzaArr={posterPizzaArr}
+        choice={choice}
+      />
       <ButtonBackHome />
     </div>
   );
