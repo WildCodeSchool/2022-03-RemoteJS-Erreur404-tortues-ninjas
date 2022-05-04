@@ -33,11 +33,3 @@
   align-items: center;
   align-content: space-around;
 }
-
-@media screen and (min-width: 750px) {
-  /* Media queries pour version desktop. */
-  .popup-wrapper {
-  }
-  .titre-home-return {
-  }
-}
