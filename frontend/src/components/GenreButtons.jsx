@@ -1,22 +1,17 @@
 import React from "react";
-import genres from "../data/genres";
 import "./GenreButtons.css";
 
-function GenreButton({ setGenreID }) {
+function GenreButton({ setGenreID, genres }) {
   return (
     <div className="buttons-genres-css">
-      {genres.map((genre) => {
-        return (
-          <button
-            className="button-genre-css"
-            id="bg-button-genre"
-            type="button"
-            onClick={() => setGenreID(genre.id)}
-          >
-            {genre.name}
-          </button>
-        );
-      })}
+      <button
+        className="button-genre-css"
+        id="bg-button-genre"
+        type="button"
+        onClick={() => setGenreID(genres.id)}
+      >
+        {genres.name}
+      </button>
     </div>
   );
 }

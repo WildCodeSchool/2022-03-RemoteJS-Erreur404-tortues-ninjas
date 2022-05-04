@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import RecherchePizza from "./pages/RecherchePizza";
 import ResultatPizza from "./pages/ResultatPizza";
 import RechercheFilm from "./pages/RechercheFilm";
 import ResultatFilm from "./pages/ResultatFilm";
@@ -19,8 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/search/film" element={<RechercheFilm />} />
-          <Route path="/search/pizza" element={<RecherchePizza />} />
+          <Route path="/search/:choice" element={<RechercheFilm />} />
           <Route path="/resultat/film" element={<ResultatFilm />} />
           <Route path="/resultat/pizza" element={<ResultatPizza />} />
           <Route path="/formulaire" element={<Formulaire />} />

@@ -3,12 +3,12 @@ import "./PosterFromApi.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-function ApiRequests({ totalUrlPosters }) {
+function ApiRequests({ posters }) {
   return (
     <div className="global">
       <div className="wrapper">
         <Carousel>
-          {totalUrlPosters.map((poster) => (
+          {posters.map((poster) => (
             <img
               key={poster}
               className="item"
