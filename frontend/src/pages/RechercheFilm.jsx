@@ -13,7 +13,6 @@ import GenreButton from "../components/GenreButtons";
 function RechercheFilm() {
   const [movie, setMovie] = useState([]);
   const [filteredPizzas, setfilteredPizzas] = useState([]);
-  const [posters, setPosters] = useState([]);
   const [genreId, setGenreID] = useState(0);
   const { choice } = useParams();
   const genresData = {
@@ -46,10 +45,6 @@ function RechercheFilm() {
     setfilteredPizzas(DataPizza.filter((pizza) => pizza.category === genreId));
   }, []);
 
-  useEffect(() => {
-    setPosters(choice === "film" ? totalUrlPosters : posterPizzaArr);
-  }, []);
-
   return (
     <div>
       <div className="MoodLogo">
@@ -73,7 +68,11 @@ function RechercheFilm() {
         />
       ))}
       <div>
-        <PosterFromApi posters={posters} />
+        <PosterFromApi
+          totalUrlPosters={totalUrlPosters}
+          posterPizzaArr={posterPizzaArr}
+          choice={choice}
+        />
       </div>
       <ButtonBackHome />
     </div>
