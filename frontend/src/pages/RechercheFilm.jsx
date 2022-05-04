@@ -38,12 +38,12 @@ function RechercheFilm() {
   }, [genreId]);
 
   useEffect(() => {
-    setGenreID(choice === "pizza" ? 1 : 28);
+    setGenreID(choice === "pizza" ? 0 : 28);
   }, []);
 
   useEffect(() => {
     setfilteredPizzas(DataPizza.filter((pizza) => pizza.category === genreId));
-  }, []);
+  }, [genreId]);
 
   return (
     <div>
