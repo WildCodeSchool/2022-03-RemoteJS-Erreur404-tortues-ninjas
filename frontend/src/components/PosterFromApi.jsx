@@ -6,7 +6,6 @@ import { Carousel } from "react-responsive-carousel";
 function ApiRequests({ totalUrlPosters }) {
   return (
     <div className="global">
-
       <div className="wrapper">
         <Carousel>
           {totalUrlPosters.map((poster) => (
@@ -18,7 +17,6 @@ function ApiRequests({ totalUrlPosters }) {
             />
           ))}
         </Carousel>
-
       </div>
     </div>
   );

@@ -1,10 +1,14 @@
 import React from "react";
-import Input from "./Input";
 
 function Filter({ search, handleSetSearch }) {
   return (
     <label htmlFor="search">
-      <Input search={search} handleSetSearch={handleSetSearch} />
+      <input
+        type="titre"
+        id="search"
+        value={search}
+        onChange={(event) => handleSetSearch(event.target.value)}
+      />
     </label>
   );
 }
