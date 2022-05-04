@@ -9,6 +9,7 @@ import MoodLogo from "../assets/moodlogo.png";
 import ButtonBackHome from "../components/ButtonBackHome";
 import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
+import "../components/GenreButtons.css";
 
 function RechercheFilm() {
   const [movie, setMovie] = useState([]);
@@ -58,15 +59,17 @@ function RechercheFilm() {
             : "Quelle pizza souhaites-tu manger ? "
         }
       />
-      {genresData[choice].map((genre, index) => (
-        <GenreButton
-          genres={genre}
-          setGenreID={setGenreID}
-          // eslint-disable-next-line react/no-array-index-key
-          key={index}
-          choice={choice}
-        />
-      ))}
+      <div className="buttons-genres-css">
+        {genresData[choice].map((genre, index) => (
+          <GenreButton
+            genres={genre}
+            setGenreID={setGenreID}
+            // eslint-disable-next-line react/no-array-index-key
+            key={index}
+            choice={choice}
+          />
+        ))}
+      </div>
       <div>
         <PosterFromApi
           totalUrlPosters={totalUrlPosters}

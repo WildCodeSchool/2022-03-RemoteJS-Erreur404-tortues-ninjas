@@ -3,7 +3,7 @@ import "./GenreButtons.css";
 
 function GenreButton({ setGenreID, genres }) {
   return (
-    <div className="buttons-genres-css">
+    <div>
       <button
         className="button-genre-css"
         id="bg-button-genre"
