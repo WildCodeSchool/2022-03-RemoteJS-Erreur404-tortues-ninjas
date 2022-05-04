@@ -6,7 +6,7 @@ function ButtonValidateResult({ buttoncolor }) {
   return (
     <div className="max-height">
       <Link to="/popup/home">
-        <button type="button" className={buttoncolor}>
+        <button type="button" id={buttoncolor}>
           Je valide !
         </button>
       </Link>
