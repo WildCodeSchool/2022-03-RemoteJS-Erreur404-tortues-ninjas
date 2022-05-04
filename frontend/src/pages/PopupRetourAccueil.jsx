@@ -18,8 +18,9 @@ function PopupRetourAccueil() {
           </h1>
         </div>
         <div className="popup-button">
-          <Link to="/home">
-            <button type="button"> Revenir à l accueil </button>
+          <Link to="/home" type="button">
+            {" "}
+            Revenir à l&apos;accueil
           </Link>
         </div>
       </div>
