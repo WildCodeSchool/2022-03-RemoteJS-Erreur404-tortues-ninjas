@@ -1,16 +1,35 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
+
+import genres from "../data/genres";
+import DataPizza from "../data/DataPizza";
+import genresPizza from "../data/genresPizzas";
+
 import Title from "../components/Title";
 import MoodLogo from "../assets/MoodLogo.png";
 import ButtonBackHome from "../components/ButtonBackHome";
 import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
-import Filter from "../components/Form/Filter";
+
+import "../components/GenreButtons.css";
 
 function RechercheFilm() {
   const [movie, setMovie] = useState([]);
-  const [genreId, setGenreID] = useState(28);
+  const [filteredPizzas, setfilteredPizzas] = useState([]);
+  const [genreId, setGenreID] = useState(0);
   const [search, setSearch] = useState("");
+  const { choice } = useParams();
+  const genresData = {
+    film: genres,
+    pizza: genresPizza,
+  };
+  const posterArray = movie.map((element) => element.poster_path);
+  const imageUrl = "https://image.tmdb.org/t/p/w500";
+  const totalUrlPosters = posterArray.map((poster) => imageUrl + poster);
+  const posterPizzaArr = filteredPizzas.map(
+    (filteredPizza) => filteredPizza.image
+  );
 
   useEffect(() => {
     axios
@@ -22,16 +41,43 @@ function RechercheFilm() {
       .then((res) => {
         setMovie(res.data.results);
       });
+    setfilteredPizzas(DataPizza.filter((pizza) => pizza.category === genreId));
   }, [genreId]);
+
+  useEffect(() => {
+    setGenreID(choice === "pizza" ? 0 : 28);
+  }, []);
+
   return (
     <div>
       <h1>Rechercher un film</h1>
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
-      <Title cls="titre" text="Quel film souhaites-tu regarder ?" />
-      <Filter search={search} handleSetSearch={setSearch} />
-      <GenreButton setGenreID={setGenreID} />
+      <Title
+        cls="titre"
+        text={
+          choice === "film"
+            ? "Quel film souhaites-tu regarder ?"
+            : "Quelle pizza souhaites-tu manger ? "
+        }
+      />
+      <div className="buttons-genres-css">
+        {genresData[choice].map((genre, index) => (
+          <GenreButton
+            genres={genre}
+            setGenreID={setGenreID}
+            // eslint-disable-next-line react/no-array-index-key
+            key={index}
+            choice={choice}
+          />
+        ))}
+      </div>
+      <PosterFromApi
+        totalUrlPosters={totalUrlPosters}
+        posterPizzaArr={posterPizzaArr}
+        choice={choice}
+      />
       <div>
         {movie
           .filter((poster) =>
@@ -41,7 +87,6 @@ function RechercheFilm() {
             <PosterFromApi key={poster} poster={poster} />
           ))}
       </div>
-      <GenreButton setGenreID={setGenreID} />
       <ButtonBackHome />
     </div>
   );

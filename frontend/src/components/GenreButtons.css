@@ -1,6 +1,6 @@
 .buttons-genres-css {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
   justify-content: center;
 }
 
@@ -26,42 +26,7 @@
   transition: 0.3s;
 }
 
-.button-genre-css:first-child {
-  border-radius: 5px 0px 0px 5px;
-}
-
-.button-genre-css:nth-child(3) {
-  border-radius: 0px 5px 5px 0px;
-}
-
-.button-genre-css:nth-child(4) {
-  border-radius: 5px 0px 0px 5px;
-}
-
-.button-genre-css:last-child {
-  border-radius: 0px 5px 5px 0px;
-}
-
-@media screen and (min-width: 607px) {
-  .button-genre-css:nth-child(3) {
-    border-radius: 0%;
-  }
-
-  .button-genre-css:nth-child(4) {
-    border-radius: 0%;
-  }
-}
-
-@media screen and (min-width: 485px) and (max-width: 606px) {
-  .button-genre-css:nth-child(3) {
-    border-radius: 0%;
-  }
-
-  .button-genre-css:nth-child(4) {
-    border-radius: 0px 5px 5px 0px;
-  }
-
-  .button-genre-css:nth-child(5) {
-    border-radius: 5px 5px 5px 5px;
-  }
+.button-genre-css {
+  border-radius: 5px 5px 5px 5px;
+  margin: 2px;
 }
