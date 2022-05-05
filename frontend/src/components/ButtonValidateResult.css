@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.bouton-valider-resultat-pizza {
+#bouton-valider-resultat-pizza {
   background-color: #90f0a9;
   font-family: "Expletus Sans", sans-serif;
   font-size: 1rem;
@@ -13,18 +13,19 @@
   height: 30px;
   width: 100px;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 10px 4px rgba(144, 240, 169, 0.75);
-  padding: 1rem;
-  margin: 1rem;
+  padding: auto;
+  margin: auto;
 }
 
-.bouton-valider-resultat-pizza:hover {
+#bouton-valider-resultat-pizza:hover {
   background-color: #57f781;
 }
 
-.bouton-valider-resultat-film {
+#bouton-valider-resultat-film {
   background-color: #b52030;
   font-family: "Expletus Sans", sans-serif;
   font-size: 1rem;
@@ -34,26 +35,27 @@
   height: 30px;
   width: 100px;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 10px 4px rgba(181, 32, 48, 0.75);
-  padding: 1rem;
-  margin: 1rem;
+  padding: auto;
+  margin: auto;
 }
 
-.bouton-valider-resultat-film:hover {
+#bouton-valider-resultat-film:hover {
   background-color: red;
 }
 
 @media screen and (min-width: 750px) {
   /* Media queries pour version desktop. */
-  .bouton-valider-resultat-pizza {
+  #bouton-valider-resultat-pizza {
     width: 200px;
     height: 80px;
     font-size: 2rem;
   }
 
-  .bouton-valider-resultat-film {
+  #bouton-valider-resultat-film {
     width: 200px;
     height: 80px;
     font-size: 2rem;

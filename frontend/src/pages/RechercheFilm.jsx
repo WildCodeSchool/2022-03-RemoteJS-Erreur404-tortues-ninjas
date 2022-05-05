@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+
 import genres from "../data/genres";
 import DataPizza from "../data/DataPizza";
 import genresPizza from "../data/genresPizzas";
+
 import Title from "../components/Title";
-import MoodLogo from "../assets/moodlogo.png";
+import MoodLogo from "../assets/MoodLogo.png";
 import ButtonBackHome from "../components/ButtonBackHome";
 import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
+
 import "../components/GenreButtons.css";
 
 function RechercheFilm() {
   const [movie, setMovie] = useState([]);
   const [filteredPizzas, setfilteredPizzas] = useState([]);
   const [genreId, setGenreID] = useState(0);
+  const [search, setSearch] = useState("");
   const { choice } = useParams();
   const genresData = {
     film: genres,
@@ -26,6 +30,7 @@ function RechercheFilm() {
   const posterPizzaArr = filteredPizzas.map(
     (filteredPizza) => filteredPizza.image
   );
+
   useEffect(() => {
     axios
       .get(
@@ -36,18 +41,16 @@ function RechercheFilm() {
       .then((res) => {
         setMovie(res.data.results);
       });
+    setfilteredPizzas(DataPizza.filter((pizza) => pizza.category === genreId));
   }, [genreId]);
 
   useEffect(() => {
     setGenreID(choice === "pizza" ? 0 : 28);
   }, []);
 
-  useEffect(() => {
-    setfilteredPizzas(DataPizza.filter((pizza) => pizza.category === genreId));
-  }, [genreId]);
-
   return (
     <div>
+      <h1>Rechercher un film</h1>
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
@@ -75,6 +78,15 @@ function RechercheFilm() {
         posterPizzaArr={posterPizzaArr}
         choice={choice}
       />
+      <div>
+        {movie
+          .filter((poster) =>
+            poster.title.toUpperCase().includes(search.toUpperCase())
+          )
+          .map((poster) => (
+            <PosterFromApi key={poster} poster={poster} />
+          ))}
+      </div>
       <ButtonBackHome />
     </div>
   );

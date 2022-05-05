@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../components/Title";
-import MoodLogo from "../assets/moodlogo.png";
+
+import MoodLogo from "../assets/MoodLogo.png";
 
 function Formulaire() {
   return (

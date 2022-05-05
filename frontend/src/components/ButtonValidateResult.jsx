@@ -5,10 +5,8 @@ import "./ButtonValidateResult.css";
 function ButtonValidateResult({ buttoncolor }) {
   return (
     <div className="max-height">
-      <Link to="/popup/suggestion">
-        <button type="button" className={buttoncolor}>
-          Je valide !
-        </button>
+      <Link to="/popup/home" type="button" id={buttoncolor}>
+        Je valide !
       </Link>
     </div>
   );
