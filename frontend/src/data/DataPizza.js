@@ -1,4 +1,4 @@
-const dataPizza = [
+const DataPizza = [
   {
     name: "Nordique",
     category: 0,
@@ -209,4 +209,4 @@ const dataPizza = [
   },
 ];
 
-export default dataPizza;
+export default DataPizza;
