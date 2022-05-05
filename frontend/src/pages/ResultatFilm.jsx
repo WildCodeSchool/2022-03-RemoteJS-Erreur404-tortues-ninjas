@@ -3,7 +3,7 @@ import ButtonBackHome from "../components/ButtonBackHome";
 import ButtonValidateResult from "../components/ButtonValidateResult";
 import ResultatFilmComponent from "../components/ResultatFilmComponent";
 
-import MoodLogo from "../assets/MoodLogo.png";
+import MoodLogo from "../assets/moodlogo.png";
 
 function ResultatFilm() {
   return (

@@ -1,6 +1,6 @@
 // Create a new component logo-header.jsx
 import React from "react";
-import MoodLogo from "../assets/MoodLogo.png";
+import MoodLogo from "../assets/moodlogo.png";
 
 import "./LogoHeader.css";
 

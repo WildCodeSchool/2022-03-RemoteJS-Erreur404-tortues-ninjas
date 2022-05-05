@@ -4,9 +4,7 @@ import Home from "./pages/Home";
 import ResultatPizza from "./pages/ResultatPizza";
 import RechercheFilm from "./pages/RechercheFilm";
 import ResultatFilm from "./pages/ResultatFilm";
-import Formulaire from "./pages/Formulaire";
 import Footer from "./components/Footer";
-import PopupSuggestion from "./pages/PopupSuggestion";
 import PopupRetourAccueil from "./pages/PopupRetourAccueil";
 import Welcome from "./pages/Welcome";
 import Page404 from "./pages/Page404";
@@ -22,8 +20,6 @@ function App() {
           <Route path="/search/:choice" element={<RechercheFilm />} />
           <Route path="/resultat/film" element={<ResultatFilm />} />
           <Route path="/resultat/pizza" element={<ResultatPizza />} />
-          <Route path="/formulaire" element={<Formulaire />} />
-          <Route path="/popup/suggestion" element={<PopupSuggestion />} />
           <Route path="/popup/home" element={<PopupRetourAccueil />} />
           <Route path="/return" element={<PopupRetourAccueil />} />
           <Route path="*" element={<Page404 />} />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import MoodLogo from "../assets/MoodLogo.png";
+import MoodLogo from "../assets/moodlogo.png";
 
 import "./PopupRetourAccueil.css";
 import PopupHomeReturn from "../components/PopupHomeReturn";
