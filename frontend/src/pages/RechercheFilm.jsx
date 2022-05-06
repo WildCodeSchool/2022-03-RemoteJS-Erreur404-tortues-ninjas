@@ -18,7 +18,6 @@ function RechercheFilm() {
   const [movie, setMovie] = useState([]);
   const [filteredPizzas, setfilteredPizzas] = useState([]);
   const [genreId, setGenreID] = useState(0);
-  const [search] = useState("");
   const { choice } = useParams();
   const genresData = {
     film: genres,
@@ -78,15 +77,6 @@ function RechercheFilm() {
         posterPizzaArr={posterPizzaArr}
         choice={choice}
       />
-      <div>
-        {movie
-          .filter((poster) =>
-            poster.title.toUpperCase().includes(search.toUpperCase())
-          )
-          .map((poster) => (
-            <PosterFromApi key={poster} poster={poster} />
-          ))}
-      </div>
       <ButtonBackHome />
     </div>
   );

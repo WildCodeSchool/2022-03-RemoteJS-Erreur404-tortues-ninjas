@@ -9,8 +9,7 @@ function ButtonBackHome() {
     <div className="max-height">
       <Link to="/home">
         <button type="button" id="button-back-home">
-          {" "}
-          Revenir à l accueil{" "}
+          Revenir à l&apos;accueil
         </button>
       </Link>
     </div>
