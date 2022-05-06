@@ -17,7 +17,7 @@ function Page404() {
         <h1 className="glitch" data-text="404">
           404
         </h1>
-        <h2>Ici pas de pizza,Pas de film,retour a l accueil.</h2>
+        <h2>Ici pas de pizza,Pas de film,retour à l&apos;accueil.</h2>
       </header>
     </div>
   );
