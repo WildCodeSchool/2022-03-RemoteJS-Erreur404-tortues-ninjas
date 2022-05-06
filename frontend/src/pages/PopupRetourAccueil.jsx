@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import MoodLogo from "../assets/MoodLogo.png";
 
 import "./PopupRetourAccueil.css";
-import PopupHomeReturn from "../components/PopupHomeReturn";
 
 function PopupRetourAccueil() {
   return (
@@ -25,7 +24,6 @@ function PopupRetourAccueil() {
           </Link>
         </div>
       </div>
-      <PopupHomeReturn />
     </div>
   );
 }
