@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
 import genres from "../data/genres";
@@ -11,13 +11,16 @@ import MoodLogo from "../assets/moodlogo.png";
 import ButtonBackHome from "../components/ButtonBackHome";
 import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
+import ResultatFilmComponent from "../components/ResultatFilmComponent";
 
 import "../components/GenreButtons.css";
+import "../components/ButtonValidateResult.css";
 
 function RechercheFilm() {
   const [movie, setMovie] = useState([]);
   const [filteredPizzas, setfilteredPizzas] = useState([]);
   const [genreId, setGenreID] = useState(0);
+  const [onePoster, setOnePoster] = useState({});
   const { choice } = useParams();
   const genresData = {
     film: genres,
@@ -49,7 +52,6 @@ function RechercheFilm() {
 
   return (
     <div>
-      <h1>Rechercher un film</h1>
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
@@ -76,7 +78,24 @@ function RechercheFilm() {
         totalUrlPosters={totalUrlPosters}
         posterPizzaArr={posterPizzaArr}
         choice={choice}
+        setOnePoster={setOnePoster}
       />
+      <Link
+        to={`/resultat/${choice}`}
+        element={<ResultatFilmComponent onePoster={onePoster} />}
+        id="recherche-link"
+      >
+        <button
+          type="button"
+          id={
+            choice === "film"
+              ? "bouton-valider-resultat-film"
+              : "bouton-valider-resultat-pizza"
+          }
+        >
+          Je choisis {choice === "film" ? "ce" : "cette"} {choice}
+        </button>
+      </Link>
       <ButtonBackHome />
     </div>
   );
