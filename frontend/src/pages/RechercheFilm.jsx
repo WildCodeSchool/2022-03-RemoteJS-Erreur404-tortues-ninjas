@@ -1,27 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
-import axios from "axios";
 
 import genres from "../data/genres";
-import DataPizza from "../data/DataPizza";
 import genresPizza from "../data/genresPizzas";
+import { Context } from "../contexts/Context";
 
 import Title from "../components/Title";
 import MoodLogo from "../assets/moodlogo.png";
 import ButtonBackHome from "../components/ButtonBackHome";
 import PosterFromApi from "../components/PosterFromApi";
 import GenreButton from "../components/GenreButtons";
-import ResultatFilmComponent from "../components/ResultatFilmComponent";
 
 import "../components/GenreButtons.css";
 import "../components/ButtonValidateResult.css";
 
 function RechercheFilm() {
-  const [movie, setMovie] = useState([]);
-  const [filteredPizzas, setfilteredPizzas] = useState([]);
-  const [genreId, setGenreID] = useState(0);
-  const [onePoster, setOnePoster] = useState({});
   const { choice } = useParams();
+  const { filteredPizzas, pizzaName, movie, setGenreID } = useContext(Context);
   const genresData = {
     film: genres,
     pizza: genresPizza,
@@ -32,19 +27,6 @@ function RechercheFilm() {
   const posterPizzaArr = filteredPizzas.map(
     (filteredPizza) => filteredPizza.image
   );
-
-  useEffect(() => {
-    axios
-      .get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=${
-          import.meta.env.VITE_TMDB_KEY
-        }&with_genres=${genreId}`
-      )
-      .then((res) => {
-        setMovie(res.data.results);
-      });
-    setfilteredPizzas(DataPizza.filter((pizza) => pizza.category === genreId));
-  }, [genreId]);
 
   useEffect(() => {
     setGenreID(choice === "pizza" ? 0 : 28);
@@ -77,14 +59,10 @@ function RechercheFilm() {
       <PosterFromApi
         totalUrlPosters={totalUrlPosters}
         posterPizzaArr={posterPizzaArr}
+        pizzaName={pizzaName}
         choice={choice}
-        setOnePoster={setOnePoster}
       />
-      <Link
-        to={`/resultat/${choice}`}
-        element={<ResultatFilmComponent onePoster={onePoster} />}
-        id="recherche-link"
-      >
+      <Link to={`/resultat/${choice}`} id="recherche-link">
         <button
           type="button"
           id={
