@@ -9,13 +9,13 @@ function PosterFromApi({ totalUrlPosters, posterPizzaArr, choice }) {
     film: totalUrlPosters,
     pizza: posterPizzaArr,
   };
-  const { setOnePoster } = useContext(Context);
+  const { handleOnePoster } = useContext(Context);
   return (
     <div className="global">
       <div className="wrapper">
         <Carousel
           onChange={(currentIndex, data) =>
-            setOnePoster({ currentIndex, data })
+            handleOnePoster({ currentIndex, data })
           }
         >
           {posterData[choice].map((poster) => (

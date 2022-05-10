@@ -16,7 +16,7 @@ import "../components/ButtonValidateResult.css";
 
 function RechercheFilm() {
   const { choice } = useParams();
-  const { filteredPizzas, movie, setGenreID } = useContext(Context);
+  const { filteredPizzas, movie, handleGenreId } = useContext(Context);
   const genresData = {
     film: genres,
     pizza: genresPizza,
@@ -29,7 +29,7 @@ function RechercheFilm() {
   );
 
   useEffect(() => {
-    setGenreID(choice === "pizza" ? 0 : 28);
+    handleGenreId(choice === "pizza" ? 0 : 28);
   }, []);
 
   return (
@@ -49,7 +49,7 @@ function RechercheFilm() {
         {genresData[choice].map((genre) => (
           <GenreButton
             genres={genre}
-            setGenreID={setGenreID}
+            handleGenreId={handleGenreId}
             choice={choice}
             key={genre.id}
           />
