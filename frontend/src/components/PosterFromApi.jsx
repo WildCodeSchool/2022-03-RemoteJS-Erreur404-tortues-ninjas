@@ -4,10 +4,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Context } from "../contexts/Context";
 
-function PosterFromApi({ totalUrlPosters, posterPizzaArr, choice, search }) {
+function PosterFromApi({ movies, pizzas, choice, search }) {
   const posterData = {
-    film: totalUrlPosters,
-    pizza: posterPizzaArr,
+    film: movies,
+    pizza: pizzas,
   };
   const { handleOnePoster } = useContext(Context);
   return (
@@ -19,14 +19,24 @@ function PosterFromApi({ totalUrlPosters, posterPizzaArr, choice, search }) {
           }
         >
           {posterData[choice]
-            .filter((poster) =>
-              poster.title.toUpperCase().includes(search.toUpperCase())
-            )
+            .filter((poster) => {
+              if (choice === "film")
+                return poster.title
+                  .toUpperCase()
+                  .includes(search.toUpperCase());
+              if (choice === "pizza")
+                return poster.name.toUpperCase().includes(search.toUpperCase());
+              return false;
+            })
             .map((poster) => (
               <img
-                key={poster.title}
+                key={poster.id}
                 className="item"
-                src={`https://image.tmdb.org/t/p/w500/${poster.poster_path}`}
+                src={
+                  choice === "film"
+                    ? `https://image.tmdb.org/t/p/w500/${poster.poster_path}`
+                    : poster.image
+                }
                 alt="movie poster"
               />
             ))}

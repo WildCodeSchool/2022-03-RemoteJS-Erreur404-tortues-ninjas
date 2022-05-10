@@ -17,16 +17,11 @@ import "../components/ButtonValidateResult.css";
 function Recherche() {
   const [search, setSearch] = useState("");
   const { choice } = useParams();
-  const { filteredPizzas, movie, handleGenreId } = useContext(Context);
+  const { pizzas, movie, handleGenreId } = useContext(Context);
   const genresData = {
     film: genres,
     pizza: genresPizza,
   };
-
-  const posterPizzaArr = filteredPizzas.map(
-    (filteredPizza) => filteredPizza.image
-  );
-
   useEffect(() => {
     handleGenreId(choice === "pizza" ? 0 : 28);
   }, []);
@@ -47,6 +42,7 @@ function Recherche() {
       <label htmlFor="search">
         <input
           type="text"
+          placeholder="recherche"
           value={search}
           onChange={(event) => setSearch(event.target.value)}
         />
@@ -62,8 +58,8 @@ function Recherche() {
         ))}
       </div>
       <PosterFromApi
-        totalUrlPosters={movie}
-        posterPizzaArr={posterPizzaArr}
+        movies={movie}
+        pizzas={pizzas}
         choice={choice}
         search={search}
       />
