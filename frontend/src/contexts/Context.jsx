@@ -24,11 +24,11 @@ export function ContextProvider({ children }) {
     setfilteredPizzas(DataPizza.filter((pizza) => pizza.category === genreId));
   }, [genreId]);
   const handleOnePoster = (poster) => {
-    setOnePoster(poster)
-  }
+    setOnePoster(poster);
+  };
   const handleGenreId = (id) => {
-    setGenreID(id)
-  }
+    setGenreID(id);
+  };
   return (
     <Context.Provider
       // eslint-disable-next-line react/jsx-no-constructed-context-values
