@@ -7,6 +7,8 @@ import DataPizza from "../data/DataPizza";
 import MoodLogo from "../assets/MoodLogo.png";
 import { Context } from "../contexts/Context";
 
+import "./ResultatFilm.css";
+
 function ResultatFilm() {
   const { genreId } = useContext(Context);
   const [pizzaRandom, setPizzaRandom] = useState({});
@@ -25,13 +27,23 @@ function ResultatFilm() {
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
-      <ResultatFilmComponent />
-      <p>{pizzaRandom.phrase}</p>
-      <ButtonValidateResult buttoncolor="bouton-valider-resultat-film" />
-      <div>
-        <img src={pizzaRandom.image} alt="une pizza" />
-        <button type="button">{pizzaRandom.name}</button>
+      <div className="resultat-film">
+        <ResultatFilmComponent />
+        <div className="resultat-film-result">
+          <p className="resultat-film-desc">{pizzaRandom.phrase}</p>
+          <div className="resultat-film-poster-button">
+            <img
+              className="resultat-film-pizza-poster"
+              src={pizzaRandom.image}
+              alt="une pizza"
+            />
+            <button type="button" id="resultat-film-button">
+              {pizzaRandom.name}
+            </button>
+          </div>
+        </div>
       </div>
+      <ButtonValidateResult buttoncolor="bouton-valider-resultat-film" />
       <ButtonBackHome />
     </div>
   );
