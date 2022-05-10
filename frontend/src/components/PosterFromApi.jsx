@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { Context } from "../contexts/Context";
 
-function PosterFromApi({ totalUrlPosters, posterPizzaArr, choice }) {
+function PosterFromApi({ totalUrlPosters, posterPizzaArr, choice, search }) {
   const posterData = {
     film: totalUrlPosters,
     pizza: posterPizzaArr,
@@ -18,14 +18,18 @@ function PosterFromApi({ totalUrlPosters, posterPizzaArr, choice }) {
             handleOnePoster({ currentIndex, data })
           }
         >
-          {posterData[choice].map((poster) => (
-            <img
-              key={poster}
-              className="item"
-              src={poster}
-              alt="movie poster"
-            />
-          ))}
+          {posterData[choice]
+            .filter((poster) =>
+              poster.title.toUpperCase().includes(search.toUpperCase())
+            )
+            .map((poster) => (
+              <img
+                key={poster.title}
+                className="item"
+                src={`https://image.tmdb.org/t/p/w500/${poster.poster_path}`}
+                alt="movie poster"
+              />
+            ))}
         </Carousel>
       </div>
     </div>

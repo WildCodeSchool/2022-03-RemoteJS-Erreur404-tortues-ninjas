@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 import genres from "../data/genres";
@@ -14,16 +14,15 @@ import GenreButton from "../components/GenreButtons";
 import "../components/GenreButtons.css";
 import "../components/ButtonValidateResult.css";
 
-function RechercheFilm() {
+function Recherche() {
+  const [search, setSearch] = useState("");
   const { choice } = useParams();
   const { filteredPizzas, movie, handleGenreId } = useContext(Context);
   const genresData = {
     film: genres,
     pizza: genresPizza,
   };
-  const posterArray = movie.map((element) => element.poster_path);
-  const imageUrl = "https://image.tmdb.org/t/p/w500";
-  const totalUrlPosters = posterArray.map((poster) => imageUrl + poster);
+
   const posterPizzaArr = filteredPizzas.map(
     (filteredPizza) => filteredPizza.image
   );
@@ -45,6 +44,13 @@ function RechercheFilm() {
             : "Quelle pizza souhaites-tu manger ? "
         }
       />
+      <label htmlFor="search">
+        <input
+          type="text"
+          value={search}
+          onChange={(event) => setSearch(event.target.value)}
+        />
+      </label>
       <div className="buttons-genres-css">
         {genresData[choice].map((genre) => (
           <GenreButton
@@ -56,9 +62,10 @@ function RechercheFilm() {
         ))}
       </div>
       <PosterFromApi
-        totalUrlPosters={totalUrlPosters}
+        totalUrlPosters={movie}
         posterPizzaArr={posterPizzaArr}
         choice={choice}
+        search={search}
       />
       <Link to={`/resultat/${choice}`} id="recherche-link">
         <button
@@ -77,4 +84,4 @@ function RechercheFilm() {
   );
 }
 
-export default RechercheFilm;
+export default Recherche;
