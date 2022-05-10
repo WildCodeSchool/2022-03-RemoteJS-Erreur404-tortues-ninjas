@@ -3,7 +3,12 @@ import "./PosterFromApi.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-function PosterFromApi({ totalUrlPosters, posterPizzaArr, choice }) {
+function PosterFromApi({
+  totalUrlPosters,
+  posterPizzaArr,
+  choice,
+  setOnePoster,
+}) {
   const posterData = {
     film: totalUrlPosters,
     pizza: posterPizzaArr,
@@ -12,7 +17,11 @@ function PosterFromApi({ totalUrlPosters, posterPizzaArr, choice }) {
   return (
     <div className="global">
       <div className="wrapper">
-        <Carousel>
+        <Carousel
+          onChange={(currentIndex, data) =>
+            setOnePoster({ currentIndex, data })
+          }
+        >
           {posterData[choice].map((poster) => (
             <img
               key={poster}
