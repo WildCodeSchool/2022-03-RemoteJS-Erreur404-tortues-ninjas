@@ -38,6 +38,7 @@ export function ContextProvider({ children }) {
         filteredPizzas,
         movie,
         handleGenreId,
+        genreId
       }}
     >
       {children}
