@@ -3,8 +3,8 @@ import { Context } from "../contexts/Context";
 import "./ResultatPizzaComponent.css";
 
 function ResultatPizzaComponent() {
-  const { onePoster, pizzaName } = useContext(Context);
-
+  const { onePoster, filteredPizzas } = useContext(Context);
+  const pizzaName = filteredPizzas.map((filteredPizza) => filteredPizza.name);
   return (
     <div className="resultat-pizza-component">
       <img src={onePoster.data.props.src} alt="img" />

@@ -10,7 +10,6 @@ export function ContextProvider({ children }) {
   const [filteredPizzas, setfilteredPizzas] = useState([]);
   const [movie, setMovie] = useState([]);
   const [genreId, setGenreID] = useState(0);
-  const pizzaName = filteredPizzas.map((filteredPizza) => filteredPizza.name);
 
   useEffect(() => {
     axios
@@ -34,7 +33,6 @@ export function ContextProvider({ children }) {
         filteredPizzas,
         movie,
         setGenreID,
-        pizzaName,
       }}
     >
       {children}

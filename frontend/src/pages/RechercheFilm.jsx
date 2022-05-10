@@ -16,7 +16,7 @@ import "../components/ButtonValidateResult.css";
 
 function RechercheFilm() {
   const { choice } = useParams();
-  const { filteredPizzas, pizzaName, movie, setGenreID } = useContext(Context);
+  const { filteredPizzas, movie, setGenreID } = useContext(Context);
   const genresData = {
     film: genres,
     pizza: genresPizza,
@@ -58,7 +58,6 @@ function RechercheFilm() {
       <PosterFromApi
         totalUrlPosters={totalUrlPosters}
         posterPizzaArr={posterPizzaArr}
-        pizzaName={pizzaName}
         choice={choice}
       />
       <Link to={`/resultat/${choice}`} id="recherche-link">
