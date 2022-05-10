@@ -1,25 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./PosterFromApi.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { Context } from "../contexts/Context";
 
-function PosterFromApi({
-  totalUrlPosters,
-  posterPizzaArr,
-  choice,
-  setOnePoster,
-}) {
+function PosterFromApi({ totalUrlPosters, posterPizzaArr, choice }) {
   const posterData = {
     film: totalUrlPosters,
     pizza: posterPizzaArr,
   };
-
+  const { handleOnePoster } = useContext(Context);
   return (
     <div className="global">
       <div className="wrapper">
         <Carousel
           onChange={(currentIndex, data) =>
-            setOnePoster({ currentIndex, data })
+            handleOnePoster({ currentIndex, data })
           }
         >
           {posterData[choice].map((poster) => (
