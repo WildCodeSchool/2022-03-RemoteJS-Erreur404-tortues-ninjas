@@ -7,7 +7,7 @@ export const Context = createContext();
 
 export function ContextProvider({ children }) {
   const [onePoster, setOnePoster] = useState({});
-  const [filteredPizzas, setfilteredPizzas] = useState([]);
+  const [pizzas] = useState(DataPizza);
   const [movie, setMovie] = useState([]);
   const [genreId, setGenreID] = useState(0);
 
@@ -21,7 +21,6 @@ export function ContextProvider({ children }) {
       .then((res) => {
         setMovie(res.data.results);
       });
-    setfilteredPizzas(DataPizza.filter((pizza) => pizza.category === genreId));
   }, [genreId]);
   const handleOnePoster = (poster) => {
     setOnePoster(poster);
@@ -35,7 +34,7 @@ export function ContextProvider({ children }) {
       value={{
         onePoster,
         handleOnePoster,
-        filteredPizzas,
+        pizzas,
         movie,
         handleGenreId,
         genreId,

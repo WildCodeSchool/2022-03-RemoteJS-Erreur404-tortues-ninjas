@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import ResultatPizza from "./pages/ResultatPizza";
-import RechercheFilm from "./pages/RechercheFilm";
+import Recherche from "./pages/Recherche";
 import ResultatFilm from "./pages/ResultatFilm";
 import Footer from "./components/Footer";
 import PopupRetourAccueil from "./pages/PopupRetourAccueil";
@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Welcome />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/search/:choice" element={<RechercheFilm />} />
+            <Route path="/search/:choice" element={<Recherche />} />
             <Route path="/resultat/film" element={<ResultatFilm />} />
             <Route path="/resultat/pizza" element={<ResultatPizza />} />
             <Route path="/popup/home" element={<PopupRetourAccueil />} />
