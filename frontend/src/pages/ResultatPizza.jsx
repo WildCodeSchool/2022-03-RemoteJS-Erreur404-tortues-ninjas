@@ -38,14 +38,25 @@ function ResultatPizza() {
       </div>
       <div className="resultat-pizza">
         <ResultatPizzaComponent />
+        <div className="resultat-pizza-result">
+          <div>
+            <p className="resultat-pizza-desc">
+              {filteredPizzas[onePoster.currentIndex].phrase}
+            </p>
+          </div>
+          <div>
+            <img
+              className="resultat-pizza-movie-poster"
+              src={`https://image.tmdb.org/t/p/w500${filteredMovie.poster_path}`}
+              alt="poster"
+            />
+          </div>
+        </div>
       </div>
-      <p>{filteredPizzas[onePoster.currentIndex].phrase}</p>
-      <img
-        src={`https://image.tmdb.org/t/p/w500${filteredMovie.poster_path}`}
-        alt="poster"
-      />
-      <ButtonValidateResult buttoncolor="bouton-valider-resultat-pizza" />
-      <ButtonBackHome />
+      <div>
+        <ButtonValidateResult buttoncolor="bouton-valider-resultat-pizza" />
+        <ButtonBackHome />
+      </div>
     </div>
   );
 }
