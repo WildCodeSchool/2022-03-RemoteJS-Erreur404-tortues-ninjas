@@ -11,7 +11,7 @@ import { Context } from "../contexts/Context";
 import "./ResultatPizza.css";
 
 function ResultatPizza() {
-  const { genreId } = useContext(Context);
+  const { genreId, onePoster } = useContext(Context);
   const [filteredMovie, setFilteredMovie] = useState([]);
   const filteredPizzas = DataPizza.filter(
     (filteredPizza) => filteredPizza.category === genreId
@@ -39,6 +39,7 @@ function ResultatPizza() {
       <div className="resultat-pizza">
         <ResultatPizzaComponent />
       </div>
+      <p>{filteredPizzas[onePoster.currentIndex].phrase}</p>
       <img
         src={`https://image.tmdb.org/t/p/w500${filteredMovie.poster_path}`}
         alt="poster"
