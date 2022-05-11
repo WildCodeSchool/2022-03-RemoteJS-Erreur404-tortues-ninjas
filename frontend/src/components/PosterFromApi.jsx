@@ -5,11 +5,13 @@ import { Carousel } from "react-responsive-carousel";
 import { Context } from "../contexts/Context";
 
 function PosterFromApi({ movies, pizzas, choice, search }) {
+  const { handleOnePoster, genreId } = useContext(Context);
+  const filteredPizzas = pizzas.filter((pizza) => pizza.category === genreId);
   const posterData = {
     film: movies,
-    pizza: pizzas,
+    pizza: filteredPizzas,
   };
-  const { handleOnePoster } = useContext(Context);
+
   return (
     <div className="global">
       <div className="wrapper">
