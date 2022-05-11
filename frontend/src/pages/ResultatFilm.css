@@ -28,7 +28,7 @@
 
 #resultat-film-button {
   background-color: #b52030;
-  color: #141414;
+  color: #f0edee;
   width: 15rem;
   height: 2.5rem;
   border-radius: 0px 0px 5px 5px;
@@ -36,6 +36,7 @@
   font-weight: bold;
   border: none;
   text-transform: uppercase;
+  margin-bottom: 35px;
 }
 
 @media screen and (min-width: 768px) {
