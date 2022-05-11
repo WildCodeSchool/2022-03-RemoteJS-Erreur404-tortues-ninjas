@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#button-back-home {
+  margin: 0;
+  background-color: #b52030;
+  font-family: "Expletus Sans", sans-serif;
+  font-size: 0.7rem;
+  color: #f0edee;
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  width: 100px;
+  transition: 0.3s;
+}
+
+#button-back-home:hover {
+  background-color: #871823;
+}

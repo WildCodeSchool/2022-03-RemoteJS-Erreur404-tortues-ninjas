@@ -1,0 +1,15 @@
+.recherche-button-back-home {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  z-index: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .recherche-button-back-home {
+    padding-right: 150px;
+  }
+}

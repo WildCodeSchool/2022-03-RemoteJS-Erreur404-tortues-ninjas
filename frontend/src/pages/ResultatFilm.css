@@ -1,0 +1,80 @@
+.resultat-film {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.resultat-film-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultat-film-desc {
+  color: #f0edee;
+  text-align: center;
+  margin: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.resultat-film-pizza-poster {
+  object-fit: cover;
+  height: 22rem;
+  width: 15rem;
+  border-radius: 5px 5px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+#resultat-film-button {
+  background-color: #b52030;
+  color: #f0edee;
+  width: 15rem;
+  height: 2.5rem;
+  border-radius: 0px 0px 5px 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .resultat-film {
+    display: flex;
+    flex-direction: unset;
+    justify-content: space-evenly;
+  }
+  .resultat-film-pizza-poster {
+    width: 20rem;
+    height: 30rem;
+    margin-left: 50px;
+  }
+  .resultat-film-result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .resultat-film-movie-poster {
+    height: 30rem;
+    width: 20rem;
+    margin-left: 60px;
+  }
+  .resultat-film-desc {
+    color: #f0edee;
+    text-align: center;
+    margin: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 500px;
+  }
+  .resultat-film-poster-button {
+    display: flex;
+    flex-direction: column;
+  }
+  #resultat-film-button {
+    width: 20rem;
+    color: #f0edee;
+    margin-left: 50px;
+  }
+}

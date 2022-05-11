@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.HomeButton {
+  display: flex;
+  justify-content: center;
+}
+.HomeTwoButton {
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+}
+.image-button {
+  width: 55vw;
+  max-width: 350px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* css animation of the buttons */
+
+.image-button {
+  animation-name: buttonAnimation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(1000deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* fin css animation button */
+
+/* Section css desktop  */
+
+@media screen and (min-width: 750px) {
+  .image-button {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .HomeButton {
+    display: flex;
+    justify-content: center;
+  }
+  .HomeTwoButton {
+    background-color: #141414;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .max-height {
+    background-color: #141414;
+  }
+
+  .image-button {
+    animation-name: buttonAnimation;
+    animation-duration: 0s;
+  }
+
+  .image-button:hover {
+    animation-name: buttonAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes buttonAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(1000deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}

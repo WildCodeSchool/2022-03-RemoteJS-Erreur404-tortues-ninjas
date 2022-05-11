@@ -1,0 +1,32 @@
+.buttons-genres-css {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#bg-button-genre {
+  background-color: #f0edee;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  box-shadow: rgba(255, 255, 255, 0.226) 0px 3px 8px;
+  transition: 0.3s;
+}
+
+#bg-button-genre:hover {
+  background-color: #b8b8b8;
+  box-shadow: rgba(176, 176, 176, 0.525) 0px 5px 15px;
+  transition: 0.3s;
+}
+
+#bg-button-genre:focus {
+  background-color: #b52030;
+  color: #f0edee;
+  transition: 0.3s;
+}
+
+.button-genre-css {
+  border-radius: 5px 5px 5px 5px;
+  margin: 2px;
+}
