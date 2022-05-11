@@ -9,6 +9,7 @@ import DataPizza from "../data/DataPizza";
 import { Context } from "../contexts/Context";
 
 import "./ResultatPizza.css";
+import "./Recherche.css";
 
 function ResultatPizza() {
   const { genreId, onePoster } = useContext(Context);
@@ -36,6 +37,9 @@ function ResultatPizza() {
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
+      <div className="recherche-button-back-home">
+        <ButtonBackHome />
+      </div>
       <div className="resultat-pizza">
         <ResultatPizzaComponent />
         <div className="resultat-pizza-result">
@@ -55,7 +59,6 @@ function ResultatPizza() {
       </div>
       <div>
         <ButtonValidateResult buttoncolor="bouton-valider-resultat-pizza" />
-        <ButtonBackHome />
       </div>
     </div>
   );
