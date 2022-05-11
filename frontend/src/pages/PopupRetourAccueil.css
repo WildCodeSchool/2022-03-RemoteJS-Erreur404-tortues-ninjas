@@ -17,18 +17,18 @@
   margin: auto;
   padding: auto;
   animation-name: slide-popup;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-iteration-count: 1;
 }
 
 @keyframes slide-popup {
   from {
-    margin-bottom: 100%;
-    height: 100vh;
+    margin-top: 100%;
+    height: 1000px;
   }
   to {
-    margin-bottom: 100%;
-    height: 53vh;
+    margin-top: 100%;
+    height: 400px;
   }
 }
 
