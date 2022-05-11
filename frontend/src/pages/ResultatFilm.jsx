@@ -8,6 +8,7 @@ import MoodLogo from "../assets/MoodLogo.png";
 import { Context } from "../contexts/Context";
 
 import "./ResultatFilm.css";
+import "./Recherche.css";
 
 function ResultatFilm() {
   const { genreId } = useContext(Context);
@@ -27,6 +28,9 @@ function ResultatFilm() {
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
+      <div className="recherche-button-back-home">
+        <ButtonBackHome />
+      </div>
       <div className="resultat-film">
         <ResultatFilmComponent />
         <div className="resultat-film-result">
@@ -44,7 +48,6 @@ function ResultatFilm() {
         </div>
       </div>
       <ButtonValidateResult buttoncolor="bouton-valider-resultat-film" />
-      <ButtonBackHome />
     </div>
   );
 }

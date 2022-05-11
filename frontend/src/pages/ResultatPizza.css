@@ -3,14 +3,14 @@
   flex-direction: column;
   margin-top: 20px;
 }
-.resultat-pizza-result{
+.resultat-pizza-result {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .resultat-pizza-desc {
-  color: #F0EDEE;
+  color: #f0edee;
   text-align: center;
   margin: 10px;
   padding-top: 30px;
@@ -22,10 +22,10 @@
   height: 22rem;
   width: 15rem;
   border-radius: 5px 5px 5px 5px;
-    display: flex;
+  display: flex;
   justify-content: center;
+  margin-bottom: 35px;
 }
-
 
 @media screen and (min-width: 768px) {
   .resultat-pizza {
@@ -37,7 +37,7 @@
     height: 22rem;
     width: 15rem;
   }
-  .resultat-pizza-result{
+  .resultat-pizza-result {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,7 +48,7 @@
     margin-left: 60px;
   }
   .resultat-pizza-desc {
-    color: #F0EDEE;
+    color: #f0edee;
     text-align: center;
     margin: 10px;
     padding-top: 30px;
