@@ -13,6 +13,7 @@ import GenreButton from "../components/GenreButtons";
 
 import "../components/GenreButtons.css";
 import "../components/ButtonValidateResult.css";
+import "./Recherche.css";
 
 function Recherche() {
   const [search, setSearch] = useState("");
@@ -30,6 +31,9 @@ function Recherche() {
     <div>
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
+      </div>
+      <div className="recherche-button-back-home">
+        <ButtonBackHome />
       </div>
       <Title
         cls="titre"
@@ -75,7 +79,6 @@ function Recherche() {
           Je choisis {choice === "film" ? "ce" : "cette"} {choice}
         </button>
       </Link>
-      <ButtonBackHome />
     </div>
   );
 }
