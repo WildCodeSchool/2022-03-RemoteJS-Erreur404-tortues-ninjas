@@ -27,6 +27,7 @@ function ResultatFilm() {
       <div className="MoodLogo">
         <img src={MoodLogo} alt="MoodLogo" />
       </div>
+      <ButtonBackHome />
       <div className="resultat-film">
         <ResultatFilmComponent />
         <div className="resultat-film-result">
@@ -44,7 +45,6 @@ function ResultatFilm() {
         </div>
       </div>
       <ButtonValidateResult buttoncolor="bouton-valider-resultat-film" />
-      <ButtonBackHome />
     </div>
   );
 }
