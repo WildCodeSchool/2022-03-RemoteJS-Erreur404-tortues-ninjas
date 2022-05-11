@@ -1,13 +1,58 @@
-@media screen and (max-width: 768px) {
-  .resultat-pizza {
-    display: flex;
-    flex-direction: column;
-  }
+.resultat-pizza {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
+.resultat-pizza-result{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultat-pizza-desc {
+  color: #F0EDEE;
+  text-align: center;
+  margin: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.resultat-pizza-movie-poster {
+  object-fit: cover;
+  height: 22rem;
+  width: 15rem;
+  border-radius: 5px 5px 5px 5px;
+    display: flex;
+  justify-content: center;
+}
+
 
 @media screen and (min-width: 768px) {
   .resultat-pizza {
     display: flex;
+    flex-direction: unset;
     justify-content: space-evenly;
+  }
+  .resultat-pizza-movie-poster {
+    height: 22rem;
+    width: 15rem;
+  }
+  .resultat-pizza-result{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .resultat-pizza-movie-poster {
+    height: 30rem;
+    width: 20rem;
+    margin-left: 60px;
+  }
+  .resultat-pizza-desc {
+    color: #F0EDEE;
+    text-align: center;
+    margin: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 500px;
   }
 }
